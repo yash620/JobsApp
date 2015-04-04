@@ -13,6 +13,8 @@ import android.widget.GridView;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
@@ -67,6 +69,13 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
 
+        MapFragment fm = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
+
+        // Getting GoogleMap object from the fragment
+        GoogleMap googleMap = fm.getMap();
+
+        // Enabling MyLocation Layer of Google Map
+        googleMap.setMyLocationEnabled(true);
         Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
         createButton.setOnClickListener(new View.OnClickListener(){
 
@@ -104,6 +113,6 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
+        googleMap.setMyLocationEnabled(true);
     }
 }
