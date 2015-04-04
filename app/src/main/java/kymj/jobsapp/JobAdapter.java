@@ -10,28 +10,39 @@ import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
+import com.parse.ParseUser;
 
 /**
  * Created by marcof on 4/4/15.
  */
 public class JobAdapter extends ParseQueryAdapter<ParseObject> {
 
-    public JobAdapter(Context context) {
+    public JobAdapter(Context context, final int side) {
     // Use the QueryFactory to construct a PQA that will only show
     // Todos marked as high-pri
+
+    //side = 1 means from the user perspective
+    //side = 0 means from the acceptor perspective
 
 
         super(context, new ParseQueryAdapter.QueryFactory<ParseObject>() {
             public ParseQuery create() {
 
-                ParseGeoPoint userLocation = new ParseGeoPoint(34.0689,-118.4451);
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("Job");
-                query.whereWithinMiles("location", userLocation, 10.0);
+                if(side == 0)
+                {
+                    query.whereEqualTo("user",ParseUser.getCurrentUser());
+                }
+                else if( side == 1)
+                {
+                    query.whereEqualTo("acceptor",ParseUser.getCurrentUser());
+                }
                 //query.setLimit(15);
                 return query;
             }
         });
     }
+
 
     public JobAdapter(Context context, final Location loc) {
         // Use the QueryFactory to construct a PQA that will only show
@@ -48,6 +59,7 @@ public class JobAdapter extends ParseQueryAdapter<ParseObject> {
                     userLocation = new ParseGeoPoint(34.0689,-118.4451);
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("Job");
                 query.whereWithinMiles("location", userLocation, 10.0);
+                query.whereNotEqualTo("user", ParseUser.getCurrentUser());
                 query.setLimit(15);
                 return query;
             }
