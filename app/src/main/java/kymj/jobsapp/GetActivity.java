@@ -1,7 +1,9 @@
 package kymj.jobsapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,11 +11,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.ParseObject;
+
 
 public class GetActivity extends Activity{
 
     private JobAdapter jobAdapter;
     private ListView listView;
+    public static final String GetActivityJobId = "kymj.jobsapp.job_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +31,27 @@ public class GetActivity extends Activity{
         listView.setAdapter(jobAdapter);
 
         //adding in click recognition for list view items
+
+        jobAdapter.loadObjects();
+        System.err.print("load");
+        final Activity me = this;
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.e("Printing onItem clic", parent.toString());
+                Log.e("Printing view", view.toString());
+                Log.e("Printng position", new Integer(position).toString());
+                Log.e("Printing id", new Long(id).toString());
+                ParseObject job = ((JobAdapter)parent.getAdapter()).getItem(position);
+                String jobId = job.getObjectId();
+                Intent jobIntent = new Intent(me, UnacceptedJobActivity.class);
+                jobIntent.putExtra(GetActivityJobId, jobId);
+                startActivity(jobIntent);
+
+
 
             }
         });
-        jobAdapter.loadObjects();
-        System.err.print("load");
 
     }
 
