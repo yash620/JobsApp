@@ -29,7 +29,7 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    View rootView;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -65,7 +65,7 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
+        rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
 
         Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
         createButton.setOnClickListener(new View.OnClickListener(){
@@ -81,9 +81,9 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
     }
 
     public void createJob(View v) {
-        String title = ((EditText) v.findViewById(R.id.TitleEdit)).getText().toString();
-        String description = ((EditText) v.findViewById(R.id.DescriptionEdit)).getText().toString();
-        int money = Integer.parseInt(((EditText) v.findViewById(R.id.MoneyEdit)).getText().toString());
+        String title = ((EditText) rootView.findViewById(R.id.TitleEdit)).getText().toString();
+        String description = ((EditText) rootView.findViewById(R.id.DescriptionEdit)).getText().toString();
+        int money = Integer.parseInt(((EditText) rootView.findViewById(R.id.MoneyEdit)).getText().toString());
         if (title.length() <= 0 || description.length() <= 0 || money < 0) {
             signUpMsg("Fields empty");
             return;
@@ -93,6 +93,7 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
         job.put("description", description);
         job.put("money", money);
         job.put("user", ParseUser.getCurrentUser());
+        job.saveInBackground();
    //     job.put("location", location);
 
     }
