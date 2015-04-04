@@ -1,10 +1,14 @@
 package kymj.jobsapp;
 
+import android.app.Activity;
 import android.content.Context;
+import android.location.Location;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -14,12 +18,37 @@ import com.parse.ParseQueryAdapter;
  * Created by marcof on 4/4/15.
  */
 public class JobAdapter extends ParseQueryAdapter<ParseObject> {
+
     public JobAdapter(Context context) {
     // Use the QueryFactory to construct a PQA that will only show
     // Todos marked as high-pri
+
+
         super(context, new ParseQueryAdapter.QueryFactory<ParseObject>() {
             public ParseQuery create() {
+
                 ParseGeoPoint userLocation = new ParseGeoPoint(34.0689,-118.4451);
+                ParseQuery<ParseObject> query = ParseQuery.getQuery("Job");
+                query.whereNear("location", userLocation);
+                query.setLimit(15);
+                return query;
+            }
+        });
+    }
+
+    public JobAdapter(Context context, final Location loc) {
+        // Use the QueryFactory to construct a PQA that will only show
+        // Todos marked as high-pri
+
+
+        super(context, new ParseQueryAdapter.QueryFactory<ParseObject>() {
+            public ParseQuery create() {
+                ParseGeoPoint userLocation;
+                if(loc != null){
+                    userLocation = new ParseGeoPoint(loc.getLatitude(), loc.getLongitude());
+                }
+                else
+                    userLocation = new ParseGeoPoint(34.0689,-118.4451);
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("Job");
                 query.whereNear("location", userLocation);
                 query.setLimit(15);

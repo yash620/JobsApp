@@ -161,13 +161,6 @@ public class CreateJob extends Fragment implements OnMapReadyCallback, GoogleApi
 
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
-//        if (mLastLocation != null) {
-//            CameraUpdate center=
-//                    CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
-//            CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
-//            googleMap.moveCamera(center);
-//            googleMap.animateCamera(zoom);
-//        }
 
         if (mRequestingLocationUpdates) {
             startLocationUpdates();
