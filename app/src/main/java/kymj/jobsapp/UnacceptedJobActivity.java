@@ -64,6 +64,8 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
         googleMap = fm.getMap();
 
         // Enabling MyLocation Layer of Google Map
+
+
         googleMap.setMyLocationEnabled(true);
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -80,9 +82,18 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
                     ((TextView)findViewById(R.id.TitleText)).setText(object.get("title").toString());
                     ((TextView)findViewById(R.id.DescriptionText)).setText(object.get("description").toString());
                     ((TextView)findViewById(R.id.MoneyText)).setText(object.get("money").toString());
+                    ParseGeoPoint jobLoc = ((ParseGeoPoint)object.get("location"));
+                    jobLocation = new Location("jobLocation");
+                    jobLocation.setLatitude(jobLoc.getLatitude());
+                    jobLocation.setLongitude(jobLoc.getLongitude());
+                    googleMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(jobLocation.getLatitude(), jobLocation.getLongitude()))
+                            .title("Job Is Here"));
                 }
             }
         });
+
+
 
     }
 

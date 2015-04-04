@@ -14,17 +14,30 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.parse.ParseObject;
 
+import java.text.DateFormat;
+import java.util.Date;
 
-public class GetActivity extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+
+public class GetActivity extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+        LocationListener {
 
     private JobAdapter jobAdapter;
     private ListView listView;
     public static final String GetActivityJobId = "kymj.jobsapp.job_id";
-    Location mLastLocation;
+
     GoogleApiClient mGoogleApiClient;
+    Location mLastLocation;
+    Location mCurrentLocation;
+    String mLastUpdateTime;
+    LocationRequest mLocationRequest;
+    boolean mRequestingLocationUpdates = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +51,13 @@ public class GetActivity extends Activity implements GoogleApiClient.ConnectionC
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
                 .build();
+        createLocationRequest();
+
+    }
+
+    public void onStart(){
+        super.onStart();
+
         jobAdapter = new JobAdapter(this, mLastLocation);
 
         listView = (ListView) findViewById(R.id.list_view_id);
@@ -59,9 +79,7 @@ public class GetActivity extends Activity implements GoogleApiClient.ConnectionC
 
             }
         });
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,6 +111,12 @@ public class GetActivity extends Activity implements GoogleApiClient.ConnectionC
     public void onConnected(Bundle bundle) {
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
+
+        if (mRequestingLocationUpdates) {
+            startLocationUpdates();
+        }
+
+
     }
 
     @Override
@@ -104,4 +128,25 @@ public class GetActivity extends Activity implements GoogleApiClient.ConnectionC
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
     }
+
+    protected void createLocationRequest() {
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mRequestingLocationUpdates = true;
+    }
+
+    protected void startLocationUpdates() {
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, this);
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        mCurrentLocation = location;
+        mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
+        onStart();
+    }
+
 }
