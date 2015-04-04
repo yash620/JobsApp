@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 
 public class CreateJob extends Fragment {
@@ -54,7 +55,8 @@ public class CreateJob extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_job, container, false);
+        View myView = inflater.inflate(R.layout.fragment_create_job, container, false);
+        return myView;
     }
 
 
