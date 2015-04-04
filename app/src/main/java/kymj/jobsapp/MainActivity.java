@@ -55,6 +55,11 @@ public class MainActivity extends Activity {
 
      */
     public void login(View view){
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            Intent in = new Intent(getApplicationContext(), LandingActivity.class);
+            startActivity(in);
+        }
         String username = ((EditText)findViewById(R.id.editText)).getText().toString();
         String password = ((EditText)findViewById(R.id.editText2)).getText().toString();
 

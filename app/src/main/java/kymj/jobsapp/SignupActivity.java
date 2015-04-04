@@ -61,7 +61,11 @@ public class SignupActivity extends Activity {
 
         System.err.print("username");
         System.err.print("password");
-
+        if(password.length() <= 0)
+        {
+            signUpMsg("Use a password");
+            return;
+        }
         ParseUser user = new ParseUser();
         user.setUsername(username);
         user.setPassword(password);
