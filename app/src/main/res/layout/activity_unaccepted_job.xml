@@ -100,8 +100,9 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        style="@style/ButtonStyle"
         android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
         android:text="Accept"
         android:id="@+id/UnacceptedJobActivityButton"
         android:layout_gravity="center_horizontal" />

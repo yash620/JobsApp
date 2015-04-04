@@ -29,7 +29,7 @@
         android:layout_marginTop="53dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        style="@style/ButtonStyle"
         android:layout_height="wrap_content"
         android:text="Signup"
         android:id="@+id/main_page_button"
@@ -39,7 +39,7 @@
         android:onClick="signup"/>
 
     <Button
-        android:layout_width="wrap_content"
+        style="@style/ButtonStyle"
         android:layout_height="wrap_content"
         android:text="Back To Login"
         android:id="@+id/back_to_login_button"

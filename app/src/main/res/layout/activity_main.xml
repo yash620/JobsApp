@@ -7,7 +7,6 @@
     android:background="#ffffff" >
 
     <EditText
-        style="@style/EditTextStyle"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:inputType="textEmailAddress"
@@ -19,7 +18,6 @@
         android:layout_marginTop="151dp" />
 
     <EditText
-        style="@style/EditTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
