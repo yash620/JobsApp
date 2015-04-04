@@ -25,6 +25,12 @@ public class MainActivity extends Activity {
         //Parse.enableLocalDatastore(this);
 
         Parse.initialize(this, "qCOUDggMQqCb743STldjmYzLwFqaWNwYg62okRK8", "fgm7HsfsqGpsXxYzbAua7u77oRoslTJGoTIdJ6Qg");
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            Intent in = new Intent(getApplicationContext(), LandingActivity.class);
+            startActivity(in);
+            finish();
+        }
     }
 
 
@@ -61,16 +67,14 @@ public class MainActivity extends Activity {
         System.err.print("username");
         System.err.print("password");
 
-        ParseUser user = new ParseUser();
-        user.setUsername(username);
-        user.setPassword(password);
 
-        user.logInInBackground(username, password, new LogInCallback() {
+        ParseUser.logInInBackground(username, password, new LogInCallback() {
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
                     System.err.print("accepted");
                     Intent in = new Intent(getApplicationContext(), LandingActivity.class);
                     startActivity(in);
+                    finish();
                 } else {
                     System.err.print("Error");
                     signUpMsg("Login Error.");
