@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -22,21 +21,19 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.parse.ParseUser;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 
 
-public class UnacceptedJobActivity extends ActionBarActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+public class AcceptedJobActivity extends ActionBarActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
+
     //TODO set fields by getting job with its id.
     GoogleApiClient mGoogleApiClient;
     GoogleMap googleMap;
@@ -46,16 +43,14 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
     LocationRequest mLocationRequest;
     boolean mRequestingLocationUpdates = false;
     Location jobLocation;
-    String jobId;
-    public static final String UnacceptedJobActivityJobId = "kymj.jobsapp.unacceptedjobactivity.jobid";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_unaccepted_job);
+        setContentView(R.layout.activity_accepted_job);
 
         Intent intent = getIntent();
-        jobId = intent.getStringExtra(GetActivity.GetActivityJobId);
+        String jobId = intent.getStringExtra(UnacceptedJobActivity.UnacceptedJobActivityJobId);
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
         query.whereEqualTo("objectId", jobId);
 
@@ -95,16 +90,13 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
                 }
             }
         });
-
-
-
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_unaccepted_job, menu);
+        getMenuInflater().inflate(R.menu.menu_accepted_job, menu);
         return true;
     }
 
@@ -125,13 +117,13 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
 
     @Override
     public void onConnected(Bundle bundle) {
-
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
 
         if (mRequestingLocationUpdates) {
             startLocationUpdates();
         }
+
     }
 
     @Override
@@ -139,7 +131,6 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
 
     }
 
-    @Override
     public void onLocationChanged(Location location) {
         mCurrentLocation = location;
         mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
@@ -175,26 +166,4 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
         LocationServices.FusedLocationApi.requestLocationUpdates(
                 mGoogleApiClient, mLocationRequest, this);
     }
-
-    public void acceptJob(View view){
-        Intent jobIntent = new Intent(this, AcceptedJobActivity.class);
-        jobIntent.putExtra(UnacceptedJobActivityJobId, jobId);
-
-        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
-        query.whereEqualTo("objectId", jobId);
-        query.getFirstInBackground(new GetCallback<ParseObject>() {
-            public void done(ParseObject object, ParseException e) {
-                if (object == null) {
-                    Log.d("score", "The getFirst request failed.");
-                } else {
-                    Log.e("accepting", "about to add acceptor here for object: + " + object);
-                    object.put("acceptor", ParseUser.getCurrentUser());
-                    object.saveInBackground();
-                }
-            }
-        });
-
-        startActivity(jobIntent);
-    }
-
 }

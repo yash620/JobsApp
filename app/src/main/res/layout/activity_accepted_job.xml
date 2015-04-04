@@ -96,11 +96,18 @@
         <Button
             style="@style/ButtonStyle"
             android:layout_height="wrap_content"
-            android:text="Accept"
-            android:id="@+id/UnacceptedJobActivityButton"
-            android:layout_gravity="center_horizontal"
-            android:onClick="acceptJob"/>
-
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Call"
+            android:id="@+id/AcceptedJobCallButton"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            style="@style/ButtonStyle"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:id="@+id/AcceptedJobChatButton"/>
 
     </LinearLayout>
 </LinearLayout>
