@@ -1,8 +1,10 @@
 package kymj.jobsapp;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -34,20 +36,23 @@ public class JobUserAdapter extends ParseQueryAdapter<ParseObject> {
     // Customize the layout by overriding getItemView
     @Override
     public View getItemView(ParseObject object, View v, ViewGroup parent) {
-        /*if (v == null) {
+
+        if (v == null) {
             v = View.inflate(getContext(), R.layout.job_list_layout, null);
         }
+
         System.err.print(object.getString("title"));
         // Add the title view
         TextView titleTextView = (TextView) v.findViewById(R.id.title);
         titleTextView.setText(object.getString("title"));
-        // Add a reminder of how long this item has been outstanding
+        //titleTextView.setTextColor(Color.GREEN);
+
         TextView descView = (TextView) v.findViewById(R.id.description);
         descView.setText(object.getString("description"));
 
         TextView cost = (TextView) v.findViewById(R.id.cost);
         cost.setText("$"+Integer.toString(object.getInt("money")));
-        return v;*/
+        //return v;*/
         return v;
     }
 }

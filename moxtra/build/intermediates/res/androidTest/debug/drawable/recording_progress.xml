@@ -4,4 +4,4 @@
     android:fromDegrees="0"
     android:pivotX="50%"
     android:pivotY="50%"
-    android:toDegrees="360" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/recording_progress.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/recording_progress.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/recording_progress.xml -->
+    android:toDegrees="360" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/recording_progress.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/recording_progress.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/recording_progress.xml -->

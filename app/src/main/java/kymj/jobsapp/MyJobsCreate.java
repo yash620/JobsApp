@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 
 public class MyJobsCreate extends Fragment {
@@ -54,8 +55,21 @@ public class MyJobsCreate extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_jobs, container, false);
+        // Inflate the layout for this fragmentlistView = (ListView) findViewById(R.id.list_view_id);
+
+        View rootView =  inflater.inflate(R.layout.fragment_my_jobs, container, false);
+        JobUserAdapter jobAdapter = new JobUserAdapter(getActivity());
+        ListView listView = (ListView) rootView.findViewById(R.id.my_jobs_create_list_view);
+        listView.setAdapter(jobAdapter);
+
+
+        //adding in click recognition for list view items
+
+        jobAdapter.loadObjects();
+        System.err.print("load");
+
+        return rootView;
+
     }
 
 

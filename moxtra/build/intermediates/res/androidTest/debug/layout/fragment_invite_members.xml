@@ -44,4 +44,4 @@
         android:layout_height="wrap_content"
         android:minHeight="@dimen/action_bar_height" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_invite_members.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/fragment_invite_members.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_invite_members.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_invite_members.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_invite_members.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_invite_members.xml -->

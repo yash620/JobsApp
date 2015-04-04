@@ -4,4 +4,4 @@
     <item android:drawable="@drawable/pagecontrol_current" android:state_selected="true"/>
     <item android:drawable="@drawable/pagecontrol_indicator"/>
 
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/add_page_indicator.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/add_page_indicator.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/add_page_indicator.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/add_page_indicator.xml -->

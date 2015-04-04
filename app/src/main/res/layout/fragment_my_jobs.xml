@@ -3,7 +3,13 @@
     android:layout_height="match_parent" tools:context="kymj.jobsapp.MyJobsCreate">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ListView
+        android:id="@+id/my_jobs_create_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_row_selector"
+        ></ListView>
 
 </FrameLayout>

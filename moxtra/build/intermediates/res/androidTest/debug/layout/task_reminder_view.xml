@@ -13,4 +13,4 @@
         android:layout_width="fill_parent"
         android:layout_height="300.0dip"
         android:layout_below="@id/indicator" />
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_reminder_view.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/task_reminder_view.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/task_reminder_view.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_reminder_view.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/task_reminder_view.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/task_reminder_view.xml -->

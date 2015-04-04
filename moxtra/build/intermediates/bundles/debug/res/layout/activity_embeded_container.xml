@@ -10,4 +10,4 @@
         android:orientation="horizontal" />
 
     <include layout="@layout/network_indication" />
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_embeded_container.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/activity_embeded_container.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_embeded_container.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/activity_embeded_container.xml -->
