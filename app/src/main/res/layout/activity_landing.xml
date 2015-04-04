@@ -24,6 +24,7 @@
         android:id="@+id/get_job_button"
         android:layout_marginTop="78dp"
         android:layout_below="@+id/create_job_button"
+        android:onClick="goToGet"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

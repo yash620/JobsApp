@@ -7,10 +7,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -31,7 +31,20 @@
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="kymj.jobsapp.LandingActivity"/>
+                android:value="kymj.jobsapp.LandingActivity" />
+        </activity>
+        <activity
+            android:name=".GetActivity"
+            android:label="@string/title_activity_get" >
+            android:parentActivityName="kymj.jobsapp.LandingActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kymj.jobsapp.LandingActivity" />
+        </activity>
+        <activity
+            android:name=".UnacceptedJobActivity"
+            android:label="@string/title_activity_unaccepted_job" >
         </activity>
     </application>
 
