@@ -108,26 +108,15 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal" >
         <Button
-            android:layout_width="wrap_content"
+            style="@style/ButtonStyle"
             android:layout_height="wrap_content"
             android:text="Accept"
             android:id="@+id/UnacceptedJobActivityButton"
             android:layout_gravity="center_horizontal" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/UnacceptedJobActivityCallButton"
-            android:layout_gravity="center_horizontal"
-            android:text="Call" />
-
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/UnacceptedJobActivityChatButton"
-            android:text="Chat" />
 
     </LinearLayout>
 </LinearLayout>
