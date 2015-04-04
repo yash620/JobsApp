@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 
 
@@ -55,9 +56,20 @@ public class CreateJob extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View myView = inflater.inflate(R.layout.fragment_create_job, container, false);
-        return myView;
+        View rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
+
+        final Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
+        createButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                createJob(v);
+            }
+        });
+        return rootView;
     }
 
+    public void createJob(View v){
 
+    }
 }
