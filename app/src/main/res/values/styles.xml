@@ -12,7 +12,7 @@
 
     <style name="ButtonStyle">
         <item name="android:textColor">#ffffff</item>
-        <item name="android:background">#33c0e0</item>
+        <item name="android:background"></item>#33c0e0</item>
         <item name="android:layout_width">200dp</item>
     </style>
 </resources>
