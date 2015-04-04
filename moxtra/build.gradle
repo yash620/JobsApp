@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion = "21.1.2"
+    defaultConfig {
+        minSdkVersion Integer.parseInt("14")
+        targetSdkVersion Integer.parseInt("22")
+        versionCode 1
+        versionName "1.0"
+    }
+    enforceUniquePackageName = false
+    packageBuildConfig = false
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+            jniLibs.srcDir 'libs'
+        }
+    }
+    buildToolsVersion '21.1.2'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //provided 'com.android.support:support-v4:21.0.3'
+}
