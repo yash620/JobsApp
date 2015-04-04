@@ -3,10 +3,16 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:background">#ffffff</item>
     </style>
-    <style name="MyActionBar" parent="Theme.AppCompat">
-        <item name="android:background">#9933CC</item>
+
+    <style name="EditTextStyle">
+        <item name="android:textColor">#ff0000</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#000000</item>
+        <item name="android:layout_width">200dp</item>
     </style>
 </resources>
