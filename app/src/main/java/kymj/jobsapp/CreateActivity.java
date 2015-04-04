@@ -1,26 +1,24 @@
 package kymj.jobsapp;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class LandingActivity extends ActionBarActivity {
+public class CreateActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing);
+        setContentView(R.layout.activity_create);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_landing, menu);
+        getMenuInflater().inflate(R.menu.menu_create_acivity, menu);
         return true;
     }
 
@@ -37,18 +35,5 @@ public class LandingActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Called when create job is clicked
-     * @param view the view this is taking place with
-     */
-    public void goToCreate(View view){
-        Intent createIntent = new Intent(this, CreateActivity.class);
-        startActivity(createIntent);
-    }
-
-    public void goToGet(View view){
-
     }
 }

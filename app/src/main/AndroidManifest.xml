@@ -20,6 +20,15 @@
             android:name=".LandingActivity"
             android:label="@string/title_activity_landing" >
         </activity>
+        <activity
+            android:name=".CreateActivity"
+            android:label="@string/title_activity_create_acivity" >
+            android:parentActivityName="kymj.jobsapp.LandingActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kymj.jobsapp.LandingActivity"/>
+        </activity>
     </application>
 
 </manifest>
