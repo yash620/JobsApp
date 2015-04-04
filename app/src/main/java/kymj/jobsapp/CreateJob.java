@@ -4,14 +4,18 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 
-public class CreateJob extends Fragment {
+
+public class CreateJob extends Fragment implements OnMapReadyCallback {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -58,7 +62,7 @@ public class CreateJob extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
 
-        final Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
+        Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
         createButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -66,10 +70,17 @@ public class CreateJob extends Fragment {
                 createJob(v);
             }
         });
+
+        FragmentManager.findFragmentById(R.id.map);
         return rootView;
     }
 
     public void createJob(View v){
+
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
 
     }
 }
