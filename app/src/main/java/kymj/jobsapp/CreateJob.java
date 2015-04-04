@@ -1,18 +1,13 @@
 package kymj.jobsapp;
 
-import android.app.Activity;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -22,15 +17,13 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
-
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -129,7 +122,14 @@ public class CreateJob extends Fragment implements OnMapReadyCallback, GoogleApi
     public void createJob(View v) {
         String title = ((EditText) rootView.findViewById(R.id.TitleEdit)).getText().toString();
         String description = ((EditText) rootView.findViewById(R.id.DescriptionEdit)).getText().toString();
-        int money = Integer.parseInt(((EditText) rootView.findViewById(R.id.MoneyEdit)).getText().toString());
+        int money = 0;
+        try {
+            money = Integer.parseInt(((EditText) rootView.findViewById(R.id.MoneyEdit)).getText().toString());
+        }
+        catch(Exception e) {
+            signUpMsg("Money is not int");
+            return;
+        }
         if (title.length() <= 0 || description.length() <= 0 || money < 0) {
             signUpMsg("Fields empty");
             return;

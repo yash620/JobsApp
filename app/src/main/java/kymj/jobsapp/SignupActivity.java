@@ -58,10 +58,9 @@ public class SignupActivity extends Activity {
     public void signup(View view){
         String username = ((EditText)findViewById(R.id.editText)).getText().toString();
         String password = ((EditText)findViewById(R.id.editText2)).getText().toString();
+        String name = ((EditText)findViewById(R.id.editText1)).getText().toString();
 
-        System.err.print("username");
-        System.err.print("password");
-        if(password.length() <= 0)
+        if(password.length() <= 0 || username.length() <= 0 || name.length() <=0)
         {
             signUpMsg("Use a password");
             return;
@@ -69,6 +68,7 @@ public class SignupActivity extends Activity {
         ParseUser user = new ParseUser();
         user.setUsername(username);
         user.setPassword(password);
+        user.put("name", name);
 
         user.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
