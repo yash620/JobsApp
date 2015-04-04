@@ -15,36 +15,10 @@ import com.parse.ParseUser;
 /**
  * Created by marcof on 4/4/15.
  */
-public class JobAdapter extends ParseQueryAdapter<ParseObject> {
-
-    public JobAdapter(Context context, final int side) {
-    // Use the QueryFactory to construct a PQA that will only show
-    // Todos marked as high-pri
-
-    //side = 1 means from the user perspective
-    //side = 0 means from the acceptor perspective
+public class JobLocationAdapter extends ParseQueryAdapter<ParseObject> {
 
 
-        super(context, new ParseQueryAdapter.QueryFactory<ParseObject>() {
-            public ParseQuery create() {
-
-                ParseQuery<ParseObject> query = ParseQuery.getQuery("Job");
-                if(side == 0)
-                {
-                    query.whereEqualTo("user",ParseUser.getCurrentUser());
-                }
-                else if( side == 1)
-                {
-                    query.whereEqualTo("acceptor",ParseUser.getCurrentUser());
-                }
-                //query.setLimit(15);
-                return query;
-            }
-        });
-    }
-
-
-    public JobAdapter(Context context, final Location loc) {
+    public JobLocationAdapter(Context context, final Location loc) {
         // Use the QueryFactory to construct a PQA that will only show
         // Todos marked as high-pri
 
@@ -60,6 +34,7 @@ public class JobAdapter extends ParseQueryAdapter<ParseObject> {
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("Job");
                 query.whereWithinMiles("location", userLocation, 10.0);
                 query.whereNotEqualTo("user", ParseUser.getCurrentUser());
+                query.whereDoesNotExist("acceptor");
                 query.setLimit(15);
                 return query;
             }

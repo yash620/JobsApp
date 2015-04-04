@@ -23,7 +23,7 @@ import java.util.Date;
 public class GetActivity extends ActionBarSignOutActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
 
-    private JobAdapter jobAdapter;
+    private JobLocationAdapter jobAdapter;
     private ListView listView;
     public static final String GetActivityJobId = "kymj.jobsapp.job_id";
 
@@ -53,7 +53,7 @@ public class GetActivity extends ActionBarSignOutActivity implements GoogleApiCl
     public void onStart(){
         super.onStart();
 
-        jobAdapter = new JobAdapter(this, mLastLocation);
+        jobAdapter = new JobLocationAdapter(this, mLastLocation);
 
         listView = (ListView) findViewById(R.id.list_view_id);
         listView.setAdapter(jobAdapter);
@@ -66,7 +66,7 @@ public class GetActivity extends ActionBarSignOutActivity implements GoogleApiCl
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ParseObject job = ((JobAdapter)parent.getAdapter()).getItem(position);
+                ParseObject job = ((JobLocationAdapter)parent.getAdapter()).getItem(position);
                 String jobId = job.getObjectId();
                 Intent jobIntent = new Intent(me, UnacceptedJobActivity.class);
                 jobIntent.putExtra(GetActivityJobId, jobId);
