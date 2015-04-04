@@ -1,6 +1,7 @@
 package kymj.jobsapp;
 
 import android.app.Activity;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,16 +14,29 @@ import android.widget.GridView;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
+import java.text.DateFormat;
+import java.util.Date;
 
-public class CreateJob extends Fragment implements OnMapReadyCallback {
+
+public class CreateJob extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+        LocationListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,6 +46,13 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
     private String mParam1;
     private String mParam2;
     View rootView;
+    GoogleApiClient mGoogleApiClient;
+    GoogleMap googleMap;
+    Location mLastLocation;
+    Location mCurrentLocation;
+    String mLastUpdateTime;
+    LocationRequest mLocationRequest;
+    boolean mRequestingLocationUpdates = false;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -69,13 +90,6 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
 
-        MapFragment fm = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
-
-        // Getting GoogleMap object from the fragment
-        GoogleMap googleMap = fm.getMap();
-
-        // Enabling MyLocation Layer of Google Map
-        googleMap.setMyLocationEnabled(true);
         Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
         createButton.setOnClickListener(new View.OnClickListener(){
 
@@ -87,6 +101,27 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
 
         //FragmentManager.findFragmentById(R.id.map);
         return rootView;
+    }
+
+    public void onStart(){
+        super.onStart();
+
+
+        MapFragment fm = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
+
+        // Getting GoogleMap object from the fragment
+        googleMap = fm.getMap();
+
+        // Enabling MyLocation Layer of Google Map
+        googleMap.setMyLocationEnabled(true);
+
+        mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        createLocationRequest();
+        rootView.invalidate();
     }
 
     public void createJob(View v) {
@@ -102,8 +137,10 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
         job.put("description", description);
         job.put("money", money);
         job.put("user", ParseUser.getCurrentUser());
+        LatLng requestLoc = googleMap.getCameraPosition().target;
+        ParseGeoPoint geoPoint = new ParseGeoPoint(requestLoc.latitude, requestLoc.longitude);
+        job.put("location", geoPoint);
         job.saveInBackground();
-   //     job.put("location", location);
 
     }
 
@@ -114,5 +151,60 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         googleMap.setMyLocationEnabled(true);
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+//        if (mLastLocation != null) {
+//            CameraUpdate center=
+//                    CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+//            CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+//            googleMap.moveCamera(center);
+//            googleMap.animateCamera(zoom);
+//        }
+
+        if (mRequestingLocationUpdates) {
+            startLocationUpdates();
+        }
+
+        rootView.invalidate();
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    protected void createLocationRequest() {
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mRequestingLocationUpdates = true;
+    }
+
+    protected void startLocationUpdates() {
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, this);
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        mCurrentLocation = location;
+        mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
+        CameraUpdate center=
+                CameraUpdateFactory.newLatLng(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+        googleMap.moveCamera(center);
+        googleMap.animateCamera(zoom);
+        rootView.invalidate();
     }
 }
