@@ -2,6 +2,7 @@ package kymj.jobsapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,21 +12,33 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.parse.ParseObject;
 
 
-public class GetActivity extends Activity{
+public class GetActivity extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private JobAdapter jobAdapter;
     private ListView listView;
     public static final String GetActivityJobId = "kymj.jobsapp.job_id";
+    Location mLastLocation;
+    GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get);
         System.err.print("go");
-        jobAdapter = new JobAdapter(this);
+
+        GoogleApiClient mGoogleApiClient;
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        jobAdapter = new JobAdapter(this, mLastLocation);
 
         listView = (ListView) findViewById(R.id.list_view_id);
         listView.setAdapter(jobAdapter);
@@ -38,17 +51,11 @@ public class GetActivity extends Activity{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.e("Printing onItem clic", parent.toString());
-                Log.e("Printing view", view.toString());
-                Log.e("Printng position", new Integer(position).toString());
-                Log.e("Printing id", new Long(id).toString());
                 ParseObject job = ((JobAdapter)parent.getAdapter()).getItem(position);
                 String jobId = job.getObjectId();
                 Intent jobIntent = new Intent(me, UnacceptedJobActivity.class);
                 jobIntent.putExtra(GetActivityJobId, jobId);
                 startActivity(jobIntent);
-
-
 
             }
         });
@@ -80,5 +87,21 @@ public class GetActivity extends Activity{
 
     protected void signUpMsg(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
     }
 }

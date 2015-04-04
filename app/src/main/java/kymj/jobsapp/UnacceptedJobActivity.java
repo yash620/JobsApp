@@ -20,9 +20,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
@@ -41,6 +43,7 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
     String mLastUpdateTime;
     LocationRequest mLocationRequest;
     boolean mRequestingLocationUpdates = false;
+    Location jobLocation;
 
 
     @Override
@@ -53,18 +56,7 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
         query.whereEqualTo("objectId", jobId);
 
-        query.getFirstInBackground(new GetCallback<ParseObject>() {
-            public void done(ParseObject object, ParseException e) {
-                if (object == null) {
-                    Log.d("score", "The getFirst request failed.");
-                } else {
-                    ((TextView)findViewById(R.id.TitleText)).setText(object.get("title").toString());
-                    ((TextView)findViewById(R.id.DescriptionText)).setText(object.get("description").toString());
-                    ((TextView)findViewById(R.id.MoneyText)).setText(object.get("money").toString());
-                    ((TextView)findViewById(R.id.LocationText)).setText(object.get("location").toString());
-                }
-            }
-        });
+
 
         MapFragment fm = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
 
@@ -79,6 +71,18 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
                 .addApi(LocationServices.API)
                 .build();
         createLocationRequest();
+
+        query.getFirstInBackground(new GetCallback<ParseObject>() {
+            public void done(ParseObject object, ParseException e) {
+                if (object == null) {
+                    Log.d("score", "The getFirst request failed.");
+                } else {
+                    ((TextView)findViewById(R.id.TitleText)).setText(object.get("title").toString());
+                    ((TextView)findViewById(R.id.DescriptionText)).setText(object.get("description").toString());
+                    ((TextView)findViewById(R.id.MoneyText)).setText(object.get("money").toString());
+                }
+            }
+        });
 
     }
 
@@ -140,6 +144,9 @@ public class UnacceptedJobActivity extends ActionBarActivity implements OnMapRea
     @Override
     public void onMapReady(GoogleMap googleMap) {
         googleMap.setMyLocationEnabled(true);
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(jobLocation.getLatitude(), jobLocation.getLongitude()))
+                .title("Job Is Here"));
     }
 
     protected void createLocationRequest() {
