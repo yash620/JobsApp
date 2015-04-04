@@ -3,6 +3,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_height="fill_parent"
 android:layout_width="fill_parent"
 android:orientation="vertical"
+android:background="#ffffff"
 android:weightSum="1.0">
 
 <Button
@@ -11,16 +12,20 @@ android:weightSum="1.0">
     android:layout_weight=".5"
     android:textSize="25dp"
     android:text="Create Job"
+    android:background="#ffffff"
+    android:textColor="#33c0e0"
     android:id="@+id/create_job_button"
     android:onClick="goToCreate"/>
 
 <Button
     android:id="@+id/get_job_button"
-    android:layout_width="match_parent"
     android:layout_height="0dip"
+    android:layout_width="match_parent"
     android:layout_weight=".5"
     android:textSize="25dp"
     android:text="Get Job"
+    android:background="#33c0e0"
+    android:textColor="#ffffff"
     android:layout_below="@+id/create_job_button"
     android:onClick="goToGet" />
 </LinearLayout>

@@ -77,8 +77,10 @@
         android:name="com.google.android.gms.maps.MapFragment"/>
 
     <Button
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Create"
         android:id="@+id/CreateFragmentButton"
         android:layout_gravity="center_horizontal" />
