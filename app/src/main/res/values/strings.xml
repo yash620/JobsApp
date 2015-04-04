@@ -15,4 +15,5 @@
 
     <string name="parse_app_id">qCOUDggMQqCb743STldjmYzLwFqaWNwYg62okRK8</string>
     <string name="parse_client_key">fgm7HsfsqGpsXxYzbAua7u77oRoslTJGoTIdJ6Qg</string>
+    <string name="title_activity_accepted_job">AcceptedJobActivity</string>
 </resources>
