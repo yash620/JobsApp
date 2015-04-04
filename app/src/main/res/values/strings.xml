@@ -6,4 +6,7 @@
     <string name="title_activity_landing">LandingActivity</string>
     <string name="main_activity_button">mainActivityButton</string>
     <string name="title_activity_create_acivity">CreateAcivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
