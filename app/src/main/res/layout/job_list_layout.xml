@@ -1,7 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/list_row_selector">
+    android:background="@drawable/list_row_selector"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/title"
@@ -30,4 +31,4 @@
         android:textSize="@dimen/description"
         android:layout_below="@+id/title" />
 
-</RelativeLayout>
+</LinearLayout>

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -98,7 +99,8 @@ public class CreateJob extends Fragment implements OnMapReadyCallback, GoogleApi
                 createJob(v);
             }
         });
-
+       // ImageView img = (ImageView) rootView.findViewById(R.id.target_image);
+       // img.setImageResource(R.drawable.dot);
         //FragmentManager.findFragmentById(R.id.map);
         return rootView;
     }
@@ -141,6 +143,7 @@ public class CreateJob extends Fragment implements OnMapReadyCallback, GoogleApi
         ParseGeoPoint geoPoint = new ParseGeoPoint(requestLoc.latitude, requestLoc.longitude);
         job.put("location", geoPoint);
         job.saveInBackground();
+
 
     }
 

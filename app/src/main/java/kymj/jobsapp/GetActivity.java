@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,6 +24,14 @@ public class GetActivity extends Activity{
 
         listView = (ListView) findViewById(R.id.list_view_id);
         listView.setAdapter(jobAdapter);
+
+        //adding in click recognition for list view items
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
         jobAdapter.loadObjects();
         System.err.print("load");
 
