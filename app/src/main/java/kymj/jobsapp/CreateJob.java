@@ -10,6 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -75,8 +80,25 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
         return rootView;
     }
 
-    public void createJob(View v){
+    public void createJob(View v) {
+        String title = ((EditText) v.findViewById(R.id.TitleEdit)).getText().toString();
+        String description = ((EditText) v.findViewById(R.id.DescriptionEdit)).getText().toString();
+        int money = Integer.parseInt(((EditText) v.findViewById(R.id.MoneyEdit)).getText().toString());
+        if (title.length() <= 0 || description.length() <= 0 || money < 0) {
+            signUpMsg("Fields empty");
+            return;
+        }
+        ParseObject job = new ParseObject("Job");
+        job.put("title", title);
+        job.put("description", description);
+        job.put("money", money);
+        job.put("user", ParseUser.getCurrentUser());
+   //     job.put("location", location);
 
+    }
+
+    protected void signUpMsg(String msg) {
+        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
