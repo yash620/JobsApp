@@ -76,6 +76,7 @@ public class SignupActivity extends Activity {
                     signUpMsg("Account Created Successfully");
                     Intent in = new Intent(getApplicationContext(), LandingActivity.class);
                     startActivity(in);
+                    finish();
                 } else {
                     signUpMsg("Account Error.");
                 }

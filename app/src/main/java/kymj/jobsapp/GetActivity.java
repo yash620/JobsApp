@@ -1,21 +1,29 @@
 package kymj.jobsapp;
 
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.Toast;
 
 
-public class GetActivity extends ActionBarActivity{
+public class GetActivity extends Activity{
 
-    ActionBar actionBar;
+    private JobAdapter jobAdapter;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get);
+        System.err.print("go");
+        jobAdapter = new JobAdapter(this);
+
+        listView = (ListView) findViewById(R.id.list_view_id);
+        listView.setAdapter(jobAdapter);
+        jobAdapter.loadObjects();
+        System.err.print("load");
 
     }
 
@@ -40,5 +48,9 @@ public class GetActivity extends ActionBarActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void signUpMsg(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }
