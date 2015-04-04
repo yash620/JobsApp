@@ -71,7 +71,7 @@ public class CreateJob extends Fragment implements OnMapReadyCallback {
             }
         });
 
-        FragmentManager.findFragmentById(R.id.map);
+        //FragmentManager.findFragmentById(R.id.map);
         return rootView;
     }
 
