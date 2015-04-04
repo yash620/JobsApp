@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kymj.jobsapp" >
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <permission
+        android:name="xx.xxxxxx.xxxxxxx.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="xx.xxxxxx.xxxxxxx.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -53,18 +73,10 @@
             android:name=".UnacceptedJobActivity"
             android:label="@string/title_activity_unaccepted_job" >
         </activity>
-        <activity
-            android:name="com.parse.ui.ParseLoginActivity"
-            android:label="@string/app_name"
-            android:launchMode="singleTop">
-            <!-- For more options, see https://www.parse.com/docs/android_guide#ui-login -->
-            <meta-data
-                android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"
-                android:value="true"/>
-            <meta-data
-                android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME"
-                android:value="true"/>
-        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBo_tuOC-1WEgSYKrLZx7JdKe0kxR_Dfkg"/>
     </application>
 
 </manifest>

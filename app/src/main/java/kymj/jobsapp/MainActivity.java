@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
+        //Parse.enableLocalDatastore(this);
 
         Parse.initialize(this, "qCOUDggMQqCb743STldjmYzLwFqaWNwYg62okRK8", "fgm7HsfsqGpsXxYzbAua7u77oRoslTJGoTIdJ6Qg");
     }
