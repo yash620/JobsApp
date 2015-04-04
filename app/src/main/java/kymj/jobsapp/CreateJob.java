@@ -9,6 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 
 public class CreateJob extends Fragment {
@@ -59,7 +64,7 @@ public class CreateJob extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_create_job, container, false);
 
         final Button createButton = (Button) rootView.findViewById(R.id.CreateFragmentButton);
-        createButton.setOnClickListener(new View.OnClickListener(){
+        createButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -69,7 +74,24 @@ public class CreateJob extends Fragment {
         return rootView;
     }
 
-    public void createJob(View v){
+    public void createJob(View v) {
+        String title = ((EditText) v.findViewById(R.id.TitleEdit)).getText().toString();
+        String description = ((EditText) v.findViewById(R.id.DescriptionEdit)).getText().toString();
+        int money = Integer.parseInt(((EditText) v.findViewById(R.id.MoneyEdit)).getText().toString());
+        if (title.length() <= 0 || description.length() <= 0 || money < 0) {
+            signUpMsg("Fields empty");
+            return;
+        }
+        ParseObject job = new ParseObject("Job");
+        job.put("title", title);
+        job.put("description", description);
+        job.put("money", money);
+        job.put("user", ParseUser.getCurrentUser());
+   //     job.put("location", location);
 
+    }
+
+    protected void signUpMsg(String msg) {
+        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
     }
 }
