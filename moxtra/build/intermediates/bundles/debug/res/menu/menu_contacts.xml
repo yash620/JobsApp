@@ -7,4 +7,4 @@
     <item
         android:id="@+id/menu_delete"
         android:title="@string/Delete" />
-</menu><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/menu/menu_contacts.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/menu/menu_contacts.xml -->
+</menu><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/menu/menu_contacts.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/menu/menu_contacts.xml -->

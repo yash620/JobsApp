@@ -66,4 +66,4 @@
         android:visibility="gone" >
     </ImageView>
 
-</com.moxtra.binder.livemeet.MXSDKMeetChatView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_sdk_livechat_messages.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/meet_sdk_livechat_messages.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/meet_sdk_livechat_messages.xml -->
+</com.moxtra.binder.livemeet.MXSDKMeetChatView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_sdk_livechat_messages.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/meet_sdk_livechat_messages.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/meet_sdk_livechat_messages.xml -->

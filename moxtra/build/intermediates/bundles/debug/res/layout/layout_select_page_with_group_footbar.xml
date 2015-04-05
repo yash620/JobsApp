@@ -28,4 +28,4 @@
         android:textColor="@color/moxtra_blue"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_marginRight="@dimen/header_bar_margin" />
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_select_page_with_group_footbar.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_select_page_with_group_footbar.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_select_page_with_group_footbar.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/layout_select_page_with_group_footbar.xml -->

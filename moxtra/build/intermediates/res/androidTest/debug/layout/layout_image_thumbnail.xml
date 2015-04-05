@@ -14,4 +14,4 @@
         android:maxHeight="@dimen/max_page_height"
         android:maxWidth="@dimen/max_page_width" />
 </LinearLayout>
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_image_thumbnail.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_image_thumbnail.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_image_thumbnail.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_image_thumbnail.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/layout_image_thumbnail.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_image_thumbnail.xml -->

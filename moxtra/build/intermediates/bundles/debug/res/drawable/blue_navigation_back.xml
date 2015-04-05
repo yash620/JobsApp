@@ -6,4 +6,4 @@
     <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/blue_navi_back_pressed" />
     <item android:state_enabled="false" android:state_pressed="true" android:drawable="@drawable/blue_navi_back_pressed" />
 </selector>
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/blue_navigation_back.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/blue_navigation_back.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/blue_navigation_back.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/drawable/blue_navigation_back.xml -->

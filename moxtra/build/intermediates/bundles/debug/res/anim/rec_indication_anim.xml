@@ -7,4 +7,4 @@
         android:repeatCount="infinite"
         android:repeatMode="reverse"
         android:toAlpha="1.0" />
-</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/rec_indication_anim.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/anim/rec_indication_anim.xml -->
+</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/rec_indication_anim.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/anim/rec_indication_anim.xml -->

@@ -3,4 +3,4 @@
     android:id="@+id/iv_binder_thumbnail"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/binder_creator_bg" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_dummy_binder.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/row_dummy_binder.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/row_dummy_binder.xml -->
+    android:background="@drawable/binder_creator_bg" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_dummy_binder.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/row_dummy_binder.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/row_dummy_binder.xml -->

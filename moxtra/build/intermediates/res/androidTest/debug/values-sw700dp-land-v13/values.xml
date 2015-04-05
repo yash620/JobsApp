@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/values-sw700dp-land-v13/values.xml -->
+    <!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/values-sw700dp-land-v13/values.xml -->
     <eat-comment/>
     <dimen name="pop_dialog_height">550dp</dimen>
     <dimen name="pop_dialog_width">360dp</dimen>

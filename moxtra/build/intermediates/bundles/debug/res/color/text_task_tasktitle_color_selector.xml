@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="@color/textview_text_disabled" android:state_enabled="false" />
     <item android:color="@color/text_tasklist_title" />
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/color/text_task_tasktitle_color_selector.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/color/text_task_tasktitle_color_selector.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/color/text_task_tasktitle_color_selector.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/color/text_task_tasktitle_color_selector.xml -->

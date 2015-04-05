@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/todo_attachment_indicator_gray" android:state_enabled="false" />
     <item android:drawable="@drawable/todo_attachment_indicator_blue" />
 
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/task_attachment_selector.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/task_attachment_selector.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/task_attachment_selector.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/drawable/task_attachment_selector.xml -->
