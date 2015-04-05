@@ -81,6 +81,11 @@ public class MyJobsCreate extends Fragment {
                     jobIntent.putExtra(MyJobsCreateJobId, jobId);
                     startActivity(jobIntent);
                 }
+                else{
+                    Intent jobIntent = new Intent(getActivity(), UserUnacceptedJobActivity.class);
+                    jobIntent.putExtra(MyJobsCreateJobId, jobId);
+                    startActivity(jobIntent);
+                }
 
 
             }

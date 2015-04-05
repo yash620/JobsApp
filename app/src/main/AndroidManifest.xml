@@ -103,7 +103,10 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".UserUnacceptedJobActivity"
+            android:label="@string/title_activity_user_unaccepted_job" >
+        </activity>
     </application>
 
 </manifest>
