@@ -68,38 +68,38 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
         } catch (MXSDKException.InvalidParameter invalidParameter) {
             invalidParameter.printStackTrace();
         }
-
+        Log.d("SDFfsddfs","sdffdssdf");
         ParseUser user = ParseUser.getCurrentUser();
         MXUserInfo userInfo = new MXUserInfo(user.getUsername() , MXUserIdentityType.IdentityUniqueId);
         Bitmap bmpAvatar = BitmapFactory.decodeFile("../../res/mipmap-mpdpi/ic_launcher.png");
-
+        Log.d("sdffdsfds","dsffdsdsf");
         MXProfileInfo profile = new MXProfileInfo("John", "Doe",bmpAvatar);
         mAcctMgr.setupUser(userInfo, profile ,null, new MXAccountManager.MXAccountLinkListener(){
             @Override
             public void onLinkAccountDone(boolean bSuccess){
                 // Do something in the callback.
+                Log.d("Hello","fsdfsdf");
             }
         });
 
         MXChatManager conversationMgr = MXChatManager.getInstance();
-
+        Log.d("Hello","Hello");
         try {
             MXChatManager.getInstance().createChat(new MXChatManager.OnCreateChatListener() {
                 @Override
                 public void onCreateChatSuccess(String binderID) {
 
-                    //Log.d("Testerinosss", "onCreateChatSuccess(), binderID = " + binderID);
-                    System.err.print("failed"+ binderID);
+                    Log.d("Testerinosss", "onCreateChatSuccess(), binderID = " + binderID);
                 }
                 @Override
                 public void onCreateChatFailed(int errorCode, String message) {
-                    //Log.d(TAG, "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
-                    System.err.print("failed");
+                    Log.d("Testerinos", "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
                 }
             });
         } catch (MXException.AccountManagerIsNotValid e) {
             e.printStackTrace();
         }
+
 
 
 
