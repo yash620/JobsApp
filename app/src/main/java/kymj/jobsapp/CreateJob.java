@@ -144,6 +144,8 @@ public class CreateJob extends Fragment implements OnMapReadyCallback, GoogleApi
         job.put("location", geoPoint);
         job.saveInBackground();
 
+        getActivity().finish();
+
 
     }
 

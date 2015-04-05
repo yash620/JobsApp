@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/values-sw700dp-land-v13/values.xml -->
-    <eat-comment/>
-    <dimen name="pop_dialog_height">550dp</dimen>
-    <dimen name="pop_dialog_width">360dp</dimen>
-</resources>

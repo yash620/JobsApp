@@ -76,9 +76,17 @@ public class MyJobsCreate extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ParseObject job = ((JobUserAdapter)parent.getAdapter()).getItem(position);
                 String jobId = job.getObjectId();
-                Intent jobIntent = new Intent(getActivity(), UserAcceptedJobActivity.class);
-                jobIntent.putExtra(MyJobsCreateJobId, jobId);
-                startActivity(jobIntent);
+                if(job.getParseUser("acceptor") != null) {
+                    Intent jobIntent = new Intent(getActivity(), UserAcceptedJobActivity.class);
+                    jobIntent.putExtra(MyJobsCreateJobId, jobId);
+                    startActivity(jobIntent);
+                }
+                else{
+                    Intent jobIntent = new Intent(getActivity(), UserUnacceptedJobActivity.class);
+                    jobIntent.putExtra(MyJobsCreateJobId, jobId);
+                    startActivity(jobIntent);
+                }
+
 
             }
         });

@@ -167,6 +167,8 @@
 
     <meta-data android:name="com.moxtra.sdk.ClientId" android:value="p_2GP3XJuW0" />
         <meta-data android:name="com.moxtra.sdk.ClientSecret" android:value="vm8Nc-dbxC4" />
+            android:name=".UserUnacceptedJobActivity"
+            android:label="@string/title_activity_user_unaccepted_job" >
     </application>
 
 </manifest>
