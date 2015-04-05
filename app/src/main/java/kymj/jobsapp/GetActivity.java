@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -25,6 +26,9 @@ public class GetActivity extends ActionBarSignOutActivity implements GoogleApiCl
 
     private JobLocationAdapter jobAdapter;
     private ListView listView;
+
+    private JobAcceptorAdapter jobAcceptedAdapter;
+    private ListView listAcceptedView;
     public static final String GetActivityJobId = "kymj.jobsapp.job_id";
 
     GoogleApiClient mGoogleApiClient;
@@ -52,16 +56,19 @@ public class GetActivity extends ActionBarSignOutActivity implements GoogleApiCl
 
     public void onStart(){
         super.onStart();
-
+        jobAcceptedAdapter = new JobAcceptorAdapter(this);
         jobAdapter = new JobLocationAdapter(this, mLastLocation);
+
+        listAcceptedView = (ListView) findViewById(R.id.list_accepted_id);
+        listAcceptedView.setAdapter(jobAcceptedAdapter);
 
         listView = (ListView) findViewById(R.id.list_view_id);
         listView.setAdapter(jobAdapter);
 
         //adding in click recognition for list view items
-
+        jobAcceptedAdapter.loadObjects();
         jobAdapter.loadObjects();
-        System.err.print("load");
+        Log.d("load", "hello");
         final Activity me = this;
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -69,6 +76,18 @@ public class GetActivity extends ActionBarSignOutActivity implements GoogleApiCl
                 ParseObject job = ((JobLocationAdapter)parent.getAdapter()).getItem(position);
                 String jobId = job.getObjectId();
                 Intent jobIntent = new Intent(me, UnacceptedJobActivity.class);
+                jobIntent.putExtra(GetActivityJobId, jobId);
+                startActivity(jobIntent);
+
+            }
+        });
+
+        listAcceptedView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ParseObject job = ((JobAcceptorAdapter)parent.getAdapter()).getItem(position);
+                String jobId = job.getObjectId();
+                Intent jobIntent = new Intent(me, AcceptedJobActivity.class);
                 jobIntent.putExtra(GetActivityJobId, jobId);
                 startActivity(jobIntent);
 

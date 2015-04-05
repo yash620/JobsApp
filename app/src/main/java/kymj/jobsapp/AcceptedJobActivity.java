@@ -2,11 +2,8 @@ package kymj.jobsapp;
 
 import android.content.Intent;
 import android.location.Location;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -31,7 +28,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 
-public class AcceptedJobActivity extends ActionBarActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
 
     //TODO set fields by getting job with its id.
@@ -50,7 +47,7 @@ public class AcceptedJobActivity extends ActionBarActivity implements OnMapReady
         setContentView(R.layout.activity_accepted_job);
 
         Intent intent = getIntent();
-        String jobId = intent.getStringExtra(UnacceptedJobActivity.UnacceptedJobActivityJobId);
+        String jobId = intent.getStringExtra(GetActivity.GetActivityJobId);
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
         query.whereEqualTo("objectId", jobId);
 
@@ -93,27 +90,6 @@ public class AcceptedJobActivity extends ActionBarActivity implements OnMapReady
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_accepted_job, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public void onConnected(Bundle bundle) {
