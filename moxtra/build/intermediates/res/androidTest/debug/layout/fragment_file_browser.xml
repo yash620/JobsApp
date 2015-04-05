@@ -14,4 +14,4 @@
     android:fastScrollEnabled="true"
     android:listSelector="@android:color/transparent"
     android:background="@android:color/white" />
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_file_browser.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/fragment_file_browser.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_file_browser.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_file_browser.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_file_browser.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_file_browser.xml -->

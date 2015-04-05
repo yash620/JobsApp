@@ -8,4 +8,4 @@
     android:background="@color/task_note_background"
     android:gravity="top|left"
     android:inputType="text|textMultiLine|textCapSentences" />
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_task_comment_edit.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/fragment_task_comment_edit.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_task_comment_edit.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_task_comment_edit.xml -->

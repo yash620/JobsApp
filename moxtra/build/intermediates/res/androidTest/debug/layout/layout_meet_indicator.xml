@@ -105,4 +105,4 @@
         android:layout_margin="10dp"
         android:src="@drawable/record_circle"
         android:layout_gravity="top|right"/>
-</com.moxtra.binder.livemeet.MXMeetIndicatorFloatView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_meet_indicator.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/layout_meet_indicator.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_meet_indicator.xml -->
+</com.moxtra.binder.livemeet.MXMeetIndicatorFloatView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_meet_indicator.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_meet_indicator.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_meet_indicator.xml -->

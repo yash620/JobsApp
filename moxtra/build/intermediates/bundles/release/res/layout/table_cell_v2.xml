@@ -128,4 +128,4 @@
         android:layout_marginRight="@dimen/header_bar_margin"
         android:visibility="gone" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/table_cell_v2.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/table_cell_v2.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/table_cell_v2.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/table_cell_v2.xml -->

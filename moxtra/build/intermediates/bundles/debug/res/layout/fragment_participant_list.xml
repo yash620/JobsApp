@@ -36,4 +36,4 @@
             android:text="@string/Mute_All"
             android:layout_marginRight="10dp" />
     </LinearLayout>
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_participant_list.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/fragment_participant_list.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_participant_list.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_participant_list.xml -->

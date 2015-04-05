@@ -94,4 +94,4 @@
         android:layout_below="@id/separator"
         android:layout_alignParentRight="true" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_chat_file_to.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/row_chat_file_to.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_chat_file_to.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/row_chat_file_to.xml -->

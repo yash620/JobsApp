@@ -50,4 +50,4 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
             android:layout_gravity="right|bottom"
             android:visibility="gone" />
     </FrameLayout>
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/adapter_select_photos.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/adapter_select_photos.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/adapter_select_photos.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/adapter_select_photos.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/adapter_select_photos.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/adapter_select_photos.xml -->
