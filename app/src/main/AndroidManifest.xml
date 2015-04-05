@@ -71,6 +71,10 @@
         <activity
             android:name=".UnacceptedJobActivity"
             android:label="@string/title_activity_unaccepted_job" >
+            android:parentActivityName="kymj.jobsapp.GetActivity >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="kymj.jobsapp.GetActivity" />
         </activity>
 
         <meta-data

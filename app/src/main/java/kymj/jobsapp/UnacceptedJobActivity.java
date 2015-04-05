@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -170,6 +168,7 @@ public class UnacceptedJobActivity extends ActionBarSignOutActivity implements O
         });
 
         startActivity(jobIntent);
+        finish();
     }
 
 }
