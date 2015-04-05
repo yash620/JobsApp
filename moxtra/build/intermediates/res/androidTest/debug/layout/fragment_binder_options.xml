@@ -35,4 +35,4 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-</ScrollView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_binder_options.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_binder_options.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_binder_options.xml -->
+</ScrollView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_binder_options.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/fragment_binder_options.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_binder_options.xml -->

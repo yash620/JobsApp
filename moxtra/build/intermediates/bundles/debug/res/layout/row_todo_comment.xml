@@ -38,4 +38,4 @@
         android:layout_toRightOf="@+id/iv_sender_avatar"
         android:layout_below="@+id/tv_comment_content" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_todo_comment.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/row_todo_comment.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_todo_comment.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/row_todo_comment.xml -->

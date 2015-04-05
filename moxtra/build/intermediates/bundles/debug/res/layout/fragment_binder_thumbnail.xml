@@ -86,4 +86,4 @@
         android:layout_height="wrap_content"
         android:layout="@layout/page_thumbnail_bottom_bar" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_binder_thumbnail.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_binder_thumbnail.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_binder_thumbnail.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/fragment_binder_thumbnail.xml -->

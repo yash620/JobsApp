@@ -169,4 +169,4 @@
         android:layout_toRightOf="@+id/layout_badge"
         android:layout_below="@+id/layout_badge"/>
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/timeline_item_group_chat2.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/timeline_item_group_chat2.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/timeline_item_group_chat2.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/timeline_item_group_chat2.xml -->

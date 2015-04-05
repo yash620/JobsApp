@@ -15,4 +15,4 @@
         android:state_focused="true"             
         android:drawable="@drawable/seekbar_thumb"/>
 </selector>
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/seekbar_thumb.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/seekbar_thumb.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/seekbar_thumb.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/seekbar_thumb.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/drawable/seekbar_thumb.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/seekbar_thumb.xml -->

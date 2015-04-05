@@ -8,4 +8,4 @@
         android:id="@+id/layout_content_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/clip_sdk_activity_save_note.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/clip_sdk_activity_save_note.xml -->
+</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/clip_sdk_activity_save_note.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/clip_sdk_activity_save_note.xml -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/values-xlarge-v4/values.xml -->
+    <!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/values-xlarge-v4/values.xml -->
     <eat-comment/>
     <bool name="is_tablet">true</bool>
     <dimen name="action_bar_text_button_height">40dp</dimen>

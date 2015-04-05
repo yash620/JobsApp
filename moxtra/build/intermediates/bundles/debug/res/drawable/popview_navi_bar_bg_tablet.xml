@@ -2,4 +2,4 @@
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
     android:src="@drawable/popover_title_bg"
     android:tileMode="clamp" />
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/popview_navi_bar_bg_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/popview_navi_bar_bg_tablet.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/popview_navi_bar_bg_tablet.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/drawable/popview_navi_bar_bg_tablet.xml -->

@@ -63,4 +63,4 @@
 
     <include layout="@layout/network_indication" />
 </RelativeLayout>
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_floating_actionbar.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/activity_floating_actionbar.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/activity_floating_actionbar.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_floating_actionbar.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/activity_floating_actionbar.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/activity_floating_actionbar.xml -->

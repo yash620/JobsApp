@@ -38,4 +38,4 @@
         android:visibility="gone" />
 
     <include layout="@layout/network_indication" />
-</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_live_meet_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/activity_live_meet_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/activity_live_meet_tablet.xml -->
+</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_live_meet_tablet.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/activity_live_meet_tablet.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/activity_live_meet_tablet.xml -->

@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/add_message_edit_text_active" android:state_enabled="true" android:state_focused="true" />
     -->
     <item android:drawable="@drawable/add_message_edit_text" />
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/add_message_edit_text_selector.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/add_message_edit_text_selector.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/add_message_edit_text_selector.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/drawable/add_message_edit_text_selector.xml -->

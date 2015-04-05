@@ -3,4 +3,4 @@
         android:id="@+id/wvBrowser"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_auth_view.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_auth_view.xml -->
+        android:background="@android:color/darker_gray" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_auth_view.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/fragment_auth_view.xml -->

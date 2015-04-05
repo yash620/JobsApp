@@ -3,4 +3,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:drawable="@drawable/todo_remind_disable"/>
     <item android:state_enabled="true" android:drawable="@drawable/todo_remind"/>
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/selector_todo_remind.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/selector_todo_remind.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/selector_todo_remind.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/drawable/selector_todo_remind.xml -->

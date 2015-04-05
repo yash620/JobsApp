@@ -74,4 +74,4 @@
         android:textStyle="bold"
         android:text="@string/Other_Binders" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/save_page_list_header.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/save_page_list_header.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/save_page_list_header.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/layout/save_page_list_header.xml -->

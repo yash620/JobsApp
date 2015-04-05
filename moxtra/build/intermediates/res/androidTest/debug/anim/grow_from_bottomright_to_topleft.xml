@@ -11,4 +11,4 @@
 		android:fromAlpha="0.0" android:toAlpha="1.0"
 		android:duration="@android:integer/config_shortAnimTime"
 	/>
-</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/grow_from_bottomright_to_topleft.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/anim/grow_from_bottomright_to_topleft.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/anim/grow_from_bottomright_to_topleft.xml -->
+</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/grow_from_bottomright_to_topleft.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/res/anim/grow_from_bottomright_to_topleft.xml --><!-- From: file:/Users/caeleanbarnes/Code/Projects/Hackathons/LAHacks/JobsApp/moxtra/build/intermediates/bundles/debug/res/anim/grow_from_bottomright_to_topleft.xml -->
