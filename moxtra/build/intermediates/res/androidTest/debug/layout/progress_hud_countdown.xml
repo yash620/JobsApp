@@ -15,4 +15,4 @@
         android:textColor="@android:color/white"
         android:textSize="60sp" />
 
-</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/progress_hud_countdown.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/progress_hud_countdown.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/progress_hud_countdown.xml -->
+</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/progress_hud_countdown.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/progress_hud_countdown.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/progress_hud_countdown.xml -->

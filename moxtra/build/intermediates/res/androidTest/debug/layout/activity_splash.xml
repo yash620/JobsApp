@@ -4,4 +4,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scaleType="centerCrop"
-    android:src="@drawable/splash_logo" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_splash.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/activity_splash.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/activity_splash.xml -->
+    android:src="@drawable/splash_logo" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/activity_splash.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/activity_splash.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/activity_splash.xml -->

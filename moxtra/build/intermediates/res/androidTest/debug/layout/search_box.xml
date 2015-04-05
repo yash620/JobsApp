@@ -12,4 +12,4 @@
     android:singleLine="true"
     android:inputType="text|textCapSentences"
     android:textColor="@android:color/black" />
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/search_box.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/search_box.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/search_box.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/search_box.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/search_box.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/search_box.xml -->

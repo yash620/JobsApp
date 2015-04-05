@@ -19,4 +19,11 @@
     <style name="Background">
         <item name="android:background">#ffffff</item>
     </style>
+
+    <style name="MoxtraTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/MoxActivityAnimation</item>
+        <item name="android:textViewStyle">@style/MoxTextViewBase</item>
+        <item name="android:listViewStyle">@style/MoxListViewBase</item>
+    </style>
 </resources>

@@ -112,4 +112,4 @@
             android:gravity="center_vertical"
             android:hint="@string/Add_a_comment" />
     </LinearLayout>
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_task_details.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_task_details.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_task_details.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_task_details.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/fragment_task_details.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_task_details.xml -->

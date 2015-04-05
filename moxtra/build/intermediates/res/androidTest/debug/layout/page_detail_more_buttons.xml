@@ -47,4 +47,4 @@
         android:background="@null"
         android:src="@drawable/more_add_page" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_more_buttons.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/page_detail_more_buttons.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/page_detail_more_buttons.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_more_buttons.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/page_detail_more_buttons.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/page_detail_more_buttons.xml -->

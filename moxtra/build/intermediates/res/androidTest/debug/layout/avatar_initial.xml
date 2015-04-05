@@ -8,4 +8,4 @@
     android:visibility="gone"
     android:gravity="center"
     android:singleLine="true"
-    android:textAppearance="?android:attr/textAppearanceLarge" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/avatar_initial.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/avatar_initial.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/avatar_initial.xml -->
+    android:textAppearance="?android:attr/textAppearanceLarge" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/avatar_initial.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/avatar_initial.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/avatar_initial.xml -->

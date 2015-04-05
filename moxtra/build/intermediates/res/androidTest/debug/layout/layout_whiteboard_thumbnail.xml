@@ -22,4 +22,4 @@
         android:layout_margin="5dp"
         android:src="@drawable/whiteboard_indicator" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_whiteboard_thumbnail.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_whiteboard_thumbnail.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_whiteboard_thumbnail.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_whiteboard_thumbnail.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/layout_whiteboard_thumbnail.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_whiteboard_thumbnail.xml -->

@@ -1,6 +1,8 @@
 package kymj.jobsapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,14 +20,23 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.moxtra.sdk.MXAccountManager;
+import com.moxtra.sdk.MXChatManager;
+import com.moxtra.sdk.MXException;
+import com.moxtra.sdk.MXSDKException;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import static com.moxtra.sdk.MXSDKConfig.MXProfileInfo;
+import static com.moxtra.sdk.MXSDKConfig.MXUserIdentityType;
+import static com.moxtra.sdk.MXSDKConfig.MXUserInfo;
 
 
 public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
@@ -40,6 +51,7 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
     LocationRequest mLocationRequest;
     boolean mRequestingLocationUpdates = false;
     Location jobLocation;
+    public MXAccountManager mAcctMgr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +62,44 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
         String jobId = intent.getStringExtra(GetActivity.GetActivityJobId);
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
         query.whereEqualTo("objectId", jobId);
+
+        try {
+            mAcctMgr = MXAccountManager.createInstance(this);
+        } catch (MXSDKException.InvalidParameter invalidParameter) {
+            invalidParameter.printStackTrace();
+        }
+
+        ParseUser user = ParseUser.getCurrentUser();
+        MXUserInfo userInfo = new MXUserInfo(user.getUsername() , MXUserIdentityType.IdentityUniqueId);
+        Bitmap bmpAvatar = BitmapFactory.decodeFile("../../res/mipmap-mpdpi/ic_launcher.png");
+
+        MXProfileInfo profile = new MXProfileInfo("John", "Doe",bmpAvatar);
+        mAcctMgr.setupUser(userInfo, profile ,null, new MXAccountManager.MXAccountLinkListener(){
+            @Override
+            public void onLinkAccountDone(boolean bSuccess){
+                // Do something in the callback.
+            }
+        });
+
+        MXChatManager conversationMgr = MXChatManager.getInstance();
+
+        try {
+            MXChatManager.getInstance().createChat(new MXChatManager.OnCreateChatListener() {
+                @Override
+                public void onCreateChatSuccess(String binderID) {
+
+                    //Log.d("Testerinosss", "onCreateChatSuccess(), binderID = " + binderID);
+                    System.err.print("failed"+ binderID);
+                }
+                @Override
+                public void onCreateChatFailed(int errorCode, String message) {
+                    //Log.d(TAG, "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
+                    System.err.print("failed");
+                }
+            });
+        } catch (MXException.AccountManagerIsNotValid e) {
+            e.printStackTrace();
+        }
 
 
 

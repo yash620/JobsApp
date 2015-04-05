@@ -68,4 +68,4 @@
         android:paddingRight="8dp"
         android:visibility="gone" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/table_cell_icon_text.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/table_cell_icon_text.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/table_cell_icon_text.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/table_cell_icon_text.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/table_cell_icon_text.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/table_cell_icon_text.xml -->

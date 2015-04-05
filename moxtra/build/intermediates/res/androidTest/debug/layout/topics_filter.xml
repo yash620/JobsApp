@@ -43,4 +43,4 @@
         android:textColor="@android:color/black"
         android:text="@string/Unread"
         android:id="@+id/rb_unread" />
-</RadioGroup><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/topics_filter.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/topics_filter.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/topics_filter.xml -->
+</RadioGroup><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/topics_filter.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/topics_filter.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/topics_filter.xml -->

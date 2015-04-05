@@ -21,4 +21,4 @@
         android:textColor="@color/darker_gray_36"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 </FrameLayout>
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_list_view.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/meet_list_view.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/meet_list_view.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_list_view.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/meet_list_view.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/meet_list_view.xml -->

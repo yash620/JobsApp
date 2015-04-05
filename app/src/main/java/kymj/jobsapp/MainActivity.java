@@ -16,14 +16,12 @@ import com.parse.ParseUser;
 
 
 public class MainActivity extends Activity {
-    // Random change
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Enable Local Datastore.
         //Parse.enableLocalDatastore(this);
-
         Parse.initialize(this, "qCOUDggMQqCb743STldjmYzLwFqaWNwYg62okRK8", "fgm7HsfsqGpsXxYzbAua7u77oRoslTJGoTIdJ6Qg");
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {

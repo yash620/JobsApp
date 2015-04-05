@@ -21,4 +21,4 @@
         android:layout_height="match_parent"
         android:layout_weight="6" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_tab_contacts_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/fragment_tab_contacts_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_tab_contacts_tablet.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/fragment_tab_contacts_tablet.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/fragment_tab_contacts_tablet.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/fragment_tab_contacts_tablet.xml -->

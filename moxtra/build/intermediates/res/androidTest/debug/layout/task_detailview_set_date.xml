@@ -19,4 +19,4 @@
         android:background="@drawable/task_details_row_selector"
         android:visibility="visible" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_detailview_set_date.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/task_detailview_set_date.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/task_detailview_set_date.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_detailview_set_date.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/task_detailview_set_date.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/task_detailview_set_date.xml -->
