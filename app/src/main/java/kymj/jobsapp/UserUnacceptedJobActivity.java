@@ -82,5 +82,7 @@ public class UserUnacceptedJobActivity extends ActionBarActivity {
                 }
             }
         });
+
+        finish();
     }
 }

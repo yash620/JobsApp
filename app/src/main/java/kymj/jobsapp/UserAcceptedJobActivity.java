@@ -26,13 +26,15 @@ import java.util.List;
 
 public class UserAcceptedJobActivity extends ActionBarActivity {
 
+    String jobId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_accepted_job);
 
         Intent intent = getIntent();
-        String jobId = intent.getStringExtra(MyJobsCreate.MyJobsCreateJobId);
+        jobId = intent.getStringExtra(MyJobsCreate.MyJobsCreateJobId);
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
         query.whereEqualTo("objectId", jobId);
         final View layout = findViewById(R.id.activity_user_accepted_job_layout);
@@ -102,5 +104,22 @@ public class UserAcceptedJobActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void completeThis(View view){
+        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
+        query.whereEqualTo("objectId", jobId);
+
+        query.getFirstInBackground(new GetCallback<ParseObject>() {
+            public void done(ParseObject object, ParseException e) {
+                if (object == null) {
+                    Log.d("score", "The getFirst request failed.");
+                } else {
+                    object.deleteInBackground();
+                }
+            }
+        });
+
+       finish();
     }
 }
