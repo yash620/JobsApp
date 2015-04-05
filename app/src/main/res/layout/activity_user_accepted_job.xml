@@ -120,30 +120,24 @@
         android:layout_gravity="center_horizontal" >
         <Button
             style="@style/ButtonStyle"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
             android:layout_marginRight="10dp"
-            android:text="Call"
-            android:id="@+id/AcceptedJobCallButton" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed"
+            android:onClick="completeThis"
+            android:id="@+id/Accepted_user_complete"
+         />
         <Button
-            style="@style/ButtonStyle"
+        style="@style/ButtonStyle"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chat"
+            android:onClick="startChat"
             android:id="@+id/AcceptedJobChatButton"/>
 
     </LinearLayout>
 
-    <Button
-        style="@style/ButtonStyle"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Completed"
-        android:onClick="completeThis"
-        android:id="@+id/Accepted_user_complete"
-        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>

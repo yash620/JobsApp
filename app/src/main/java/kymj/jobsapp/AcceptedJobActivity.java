@@ -162,63 +162,93 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
 
     public void startChat(View view){
 
-        MXChatManager conversationMgr = MXChatManager.getInstance();
+        final MXChatManager conversationMgr = MXChatManager.getInstance();
 
-        try {
-            conversationMgr.createChat(((TextView)findViewById(R.id.TitleText)).getText().toString(), null, new MXChatManager.OnCreateChatListener() {
-                @Override
-                public void onCreateChatSuccess(final String binderID) {
-                    Log.d("YAAAAY created", "onCreateChatSuccess(), binderID = " + binderID);
-                    final MXChatManager.OnInviteListener callback = new MXChatManager.OnInviteListener() {
+        final List<String> uniqueIds = new ArrayList();
+        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
+        query.whereEqualTo("objectId", jobId);
+        query.getFirstInBackground(new GetCallback<ParseObject>() {
+            public void done(final ParseObject object, ParseException e) {
+                if (object == null) {
+                    Log.d("score", "The getFirst request failed.");
+                } else {
+                    ParseQuery<ParseUser> query2 = ParseUser.getQuery();
+                    query2.whereEqualTo("objectId", object.getParseObject("user").getObjectId());
+
+                    query2.getFirstInBackground(new GetCallback<ParseUser>() {
+
                         @Override
-                        public void onInviteSuccess() {
-                            Toast.makeText(AcceptedJobActivity.this, "Invite Successfully", Toast.LENGTH_SHORT).show();
+                        public void done(ParseUser parseUser, ParseException e) {
+                            if (e == null) {
+                                Log.e("inviting is happening", "invites");
+                                 //list of ids to invite
+                                uniqueIds.add(parseUser.get("username").toString());
+                                try {
+                                    conversationMgr.createChat(((TextView)findViewById(R.id.TitleText)).getText().toString(), uniqueIds, new MXChatManager.OnCreateChatListener() {
+                                        @Override
+                                        public void onCreateChatSuccess(final String binderID) {
+                                            Log.d("YAAAAY created", "onCreateChatSuccess(), binderID = " + binderID);
+                                            final MXChatManager.OnInviteListener callback = new MXChatManager.OnInviteListener() {
+                                                @Override
+                                                public void onInviteSuccess() {
+                                                    Toast.makeText(AcceptedJobActivity.this, "Invite Successfully", Toast.LENGTH_SHORT).show();
+                                                }
+
+                                                @Override
+                                                public void onInviteFailed(int errorCode, String message) {
+                                                    Toast.makeText(AcceptedJobActivity.this, "Invite Failed. Error: " + message + " " + errorCode, Toast.LENGTH_LONG).show();
+                                                }
+                                            };
+                                        }
+
+                                        @Override
+                                        public void onCreateChatFailed(int errorCode, String message) {
+                                            Log.d("Noooo failure", "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
+                                        }
+                                    });
+                                } catch (MXException.AccountManagerIsNotValid t) {
+                                    t.printStackTrace();
+                                }
+                                //MXChatManager.getInstance().inviteByUniqueIds(binderID, uniqueIds, callback);
+                            } else {
+                                Log.e("CAN'T FIND owner", "TT_TT");
+                            }
+
+
                         }
-
-                        @Override
-                        public void onInviteFailed(int errorCode, String message) {
-                            Toast.makeText(AcceptedJobActivity.this, "Invite Failed. Error: " + message, Toast.LENGTH_LONG).show();
-                        }
-                    };
-
-
-                    //Begin queryin to Parse to get acceptor to connect to
-                    ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
-                    query.whereEqualTo("objectId", jobId);
-                    query.getFirstInBackground(new GetCallback<ParseObject>() {
-                                                   public void done(final ParseObject object, ParseException e) {
-                                                       if (object == null) {
-                                                           Log.d("score", "The getFirst request failed.");
-                                                       } else {
-                                                           ParseQuery<ParseUser> query2 = ParseUser.getQuery();
-                                                           query2.whereEqualTo("objectId", object.getParseObject("acceptor").getObjectId());
-
-                                                           query2.getFirstInBackground(new GetCallback<ParseUser>() {
-
-                                                               @Override
-                                                               public void done(ParseUser parseUser, ParseException e) {
-                                                                   if (e == null) {
-                                                                       List uniqueIds = new ArrayList(); //list of ids to invite
-                                                                       uniqueIds.add(parseUser.get("name"));
-                                                                       MXChatManager.getInstance().inviteByUniqueIds(binderID, uniqueIds, callback);
-                                                                   } else {
-                                                                       Log.e("CAN'T FIND ACCEPTOR", "TT_TT");
-                                                                   }
-                                                               }
-                                                           });
-                                                       }
-                                                   }
-                                               });
+                    });
                 }
+            }
+        });
 
-                @Override
-                public void onCreateChatFailed(int errorCode, String message) {
-                    Log.d("Noooo failure", "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
-                }
-            });
-        } catch (MXException.AccountManagerIsNotValid e) {
-            e.printStackTrace();
-        }
+       // uniqueIds.add("yashwanth");
+//        List<String> emptyList = new ArrayList<>();
+//        try {
+//            conversationMgr.createChat(((TextView)findViewById(R.id.TitleText)).getText().toString(), uniqueIds, new MXChatManager.OnCreateChatListener() {
+//                @Override
+//                public void onCreateChatSuccess(final String binderID) {
+//                    Log.d("YAAAAY created", "onCreateChatSuccess(), binderID = " + binderID);
+//                    final MXChatManager.OnInviteListener callback = new MXChatManager.OnInviteListener() {
+//                        @Override
+//                        public void onInviteSuccess() {
+//                            Toast.makeText(AcceptedJobActivity.this, "Invite Successfully", Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                        @Override
+//                        public void onInviteFailed(int errorCode, String message) {
+//                            Toast.makeText(AcceptedJobActivity.this, "Invite Failed. Error: " + message + " " + errorCode, Toast.LENGTH_LONG).show();
+//                        }
+//                    };
+//                }
+//
+//                @Override
+//                public void onCreateChatFailed(int errorCode, String message) {
+//                    Log.d("Noooo failure", "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
+//                }
+//            });
+//        } catch (MXException.AccountManagerIsNotValid e) {
+//            e.printStackTrace();
+//        }
 
     }
 }

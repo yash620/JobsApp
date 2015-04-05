@@ -19,6 +19,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
     compileOptions {
     }
 }
@@ -30,6 +37,7 @@ dependencies {
     compile 'com.parse.bolts:bolts-android:1.1.2'
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:multidex:1.0.0'
+
     compile project(':moxtra')
     // Module dependency on ParseLoginUI library sources
     //compile project(':ParseLoginUI')
