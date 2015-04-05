@@ -34,4 +34,4 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/header_bar_margin"
         android:src="@drawable/accessory_disclosure" />
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_invite_via_sms.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/row_invite_via_sms.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/row_invite_via_sms.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_invite_via_sms.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/row_invite_via_sms.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/row_invite_via_sms.xml -->

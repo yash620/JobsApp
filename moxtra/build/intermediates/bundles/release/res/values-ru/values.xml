@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/values-ru/values.xml -->
+    <!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/values-ru/values.xml -->
     <eat-comment/>
     <plurals name="activities">
         <item quantity="other">"Действий: %d"</item>

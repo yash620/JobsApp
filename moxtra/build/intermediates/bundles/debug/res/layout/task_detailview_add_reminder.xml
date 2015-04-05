@@ -20,4 +20,4 @@
         android:textStyle="normal"
         android:background="@drawable/task_details_row_selector"
         android:visibility="visible" />
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_detailview_add_reminder.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/task_detailview_add_reminder.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_detailview_add_reminder.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/task_detailview_add_reminder.xml -->

@@ -29,6 +29,12 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
@@ -41,7 +47,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:name="android.support.multidex.MultiDexApplication">
+        android:name="kymj.jobsapp.MoxtraApplication">
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -108,20 +114,11 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> d083adbbf93d7d3a57719f0154c7e7ffd7a8ea9d
         <activity
             android:name=".UserUnacceptedJobActivity"
             android:label="@string/title_activity_user_unaccepted_job" >
         </activity>
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> d083adbbf93d7d3a57719f0154c7e7ffd7a8ea9d
         <activity
             android:name="com.moxtra.binder.activity.DialogFragmentActivity"
             android:theme="@style/MoxtraTheme"
@@ -182,9 +179,7 @@
 
     <meta-data android:name="com.moxtra.sdk.ClientId" android:value="p_2GP3XJuW0" />
         <meta-data android:name="com.moxtra.sdk.ClientSecret" android:value="vm8Nc-dbxC4" />
-<<<<<<< HEAD
+
     </application>
-=======
->>>>>>> d083adbbf93d7d3a57719f0154c7e7ffd7a8ea9d
 
 </manifest>

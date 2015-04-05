@@ -94,4 +94,4 @@
             android:background="@null"
             android:src="@drawable/voice_delete" />
     </FrameLayout>
-</com.moxtra.binder.widget.MXAudioRecorderPanel><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_audio_recorder.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/layout_audio_recorder.xml -->
+</com.moxtra.binder.widget.MXAudioRecorderPanel><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_audio_recorder.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_audio_recorder.xml -->

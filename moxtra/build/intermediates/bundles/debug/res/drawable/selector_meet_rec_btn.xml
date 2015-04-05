@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/pause_meet_record" mx:is_checked="true" />
     <item android:drawable="@drawable/start_meet_record" mx:is_checked="false" />
     <item android:drawable="@drawable/start_meet_record" />
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/selector_meet_rec_btn.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/selector_meet_rec_btn.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/selector_meet_rec_btn.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/selector_meet_rec_btn.xml -->

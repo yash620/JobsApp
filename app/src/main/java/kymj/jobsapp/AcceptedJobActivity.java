@@ -6,7 +6,9 @@ import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -21,6 +23,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.moxtra.sdk.MXAccountManager;
+import com.moxtra.sdk.MXChatManager;
+import com.moxtra.sdk.MXException;
 import com.moxtra.sdk.MXSDKException;
 import com.parse.GetCallback;
 import com.parse.ParseException;
@@ -30,11 +34,14 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import static com.moxtra.sdk.MXSDKConfig.MXProfileInfo;
 import static com.moxtra.sdk.MXSDKConfig.MXUserIdentityType;
 import static com.moxtra.sdk.MXSDKConfig.MXUserInfo;
+
 
 
 public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
@@ -50,6 +57,8 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
     boolean mRequestingLocationUpdates = false;
     Location jobLocation;
     public MXAccountManager mAcctMgr;
+    public MXAccountManager acctMgr;
+    String jobId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,49 +66,9 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
         setContentView(R.layout.activity_accepted_job);
 
         Intent intent = getIntent();
-        String jobId = intent.getStringExtra(GetActivity.GetActivityJobId);
+        jobId = intent.getStringExtra(GetActivity.GetActivityJobId);
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
         query.whereEqualTo("objectId", jobId);
-
-        try {
-            mAcctMgr = MXAccountManager.createInstance(this);
-        } catch (MXSDKException.InvalidParameter invalidParameter) {
-            invalidParameter.printStackTrace();
-        }
-        Log.d("SDFfsddfs","sdffdssdf");
-        ParseUser user = ParseUser.getCurrentUser();
-        MXUserInfo userInfo = new MXUserInfo(user.getUsername() , MXUserIdentityType.IdentityUniqueId);
-        Bitmap bmpAvatar = BitmapFactory.decodeFile("../../res/mipmap-mpdpi/ic_launcher.png");
-        Log.d("sdffdsfds","dsffdsdsf");
-        MXProfileInfo profile = new MXProfileInfo("John", "Doe",bmpAvatar);
-        mAcctMgr.setupUser(userInfo, profile ,null, new MXAccountManager.MXAccountLinkListener(){
-            @Override
-            public void onLinkAccountDone(boolean bSuccess){
-                // Do something in the callback.
-                Log.d("Hello","fsdfsdf");
-            }
-        });
-
-        //MXChatManager conversationMgr = MXChatManager.getInstance();
-        Log.d("Hello","Hello");
-        /*try {
-            MXChatManager.getInstance().createChat(new MXChatManager.OnCreateChatListener() {
-                @Override
-                public void onCreateChatSuccess(String binderID) {
-
-                    Log.d("Testerinosss", "onCreateChatSuccess(), binderID = " + binderID);
-                }
-                @Override
-                public void onCreateChatFailed(int errorCode, String message) {
-                    Log.d("Testerinos", "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
-                }
-            });
-        } catch (MXException.AccountManagerIsNotValid e) {
-            e.printStackTrace();
-        }*/
-
-
-
 
         MapFragment fm = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
 
@@ -189,5 +158,67 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
     protected void startLocationUpdates() {
         LocationServices.FusedLocationApi.requestLocationUpdates(
                 mGoogleApiClient, mLocationRequest, this);
+    }
+
+    public void startChat(View view){
+
+        MXChatManager conversationMgr = MXChatManager.getInstance();
+
+        try {
+            conversationMgr.createChat(((TextView)findViewById(R.id.TitleText)).getText().toString(), null, new MXChatManager.OnCreateChatListener() {
+                @Override
+                public void onCreateChatSuccess(final String binderID) {
+                    Log.d("YAAAAY created", "onCreateChatSuccess(), binderID = " + binderID);
+                    final MXChatManager.OnInviteListener callback = new MXChatManager.OnInviteListener() {
+                        @Override
+                        public void onInviteSuccess() {
+                            Toast.makeText(AcceptedJobActivity.this, "Invite Successfully", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onInviteFailed(int errorCode, String message) {
+                            Toast.makeText(AcceptedJobActivity.this, "Invite Failed. Error: " + message, Toast.LENGTH_LONG).show();
+                        }
+                    };
+
+
+                    //Begin queryin to Parse to get acceptor to connect to
+                    ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Job");
+                    query.whereEqualTo("objectId", jobId);
+                    query.getFirstInBackground(new GetCallback<ParseObject>() {
+                                                   public void done(final ParseObject object, ParseException e) {
+                                                       if (object == null) {
+                                                           Log.d("score", "The getFirst request failed.");
+                                                       } else {
+                                                           ParseQuery<ParseUser> query2 = ParseUser.getQuery();
+                                                           query2.whereEqualTo("objectId", object.getParseObject("acceptor").getObjectId());
+
+                                                           query2.getFirstInBackground(new GetCallback<ParseUser>() {
+
+                                                               @Override
+                                                               public void done(ParseUser parseUser, ParseException e) {
+                                                                   if (e == null) {
+                                                                       List uniqueIds = new ArrayList(); //list of ids to invite
+                                                                       uniqueIds.add(parseUser.get("name"));
+                                                                       MXChatManager.getInstance().inviteByUniqueIds(binderID, uniqueIds, callback);
+                                                                   } else {
+                                                                       Log.e("CAN'T FIND ACCEPTOR", "TT_TT");
+                                                                   }
+                                                               }
+                                                           });
+                                                       }
+                                                   }
+                                               });
+                }
+
+                @Override
+                public void onCreateChatFailed(int errorCode, String message) {
+                    Log.d("Noooo failure", "onCreateChatFailed(), errorCode = " + errorCode + ", message = " + message);
+                }
+            });
+        } catch (MXException.AccountManagerIsNotValid e) {
+            e.printStackTrace();
+        }
+
     }
 }

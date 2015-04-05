@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/todo_enabled" mx:is_checked="true"/>
     <item android:drawable="@drawable/todo_disabled"></item>
 
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/selector_todo_switcher.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/selector_todo_switcher.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/selector_todo_switcher.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/selector_todo_switcher.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/selector_todo_switcher.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/selector_todo_switcher.xml -->

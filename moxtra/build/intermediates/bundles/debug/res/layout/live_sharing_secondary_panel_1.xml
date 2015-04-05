@@ -65,4 +65,4 @@
         android:src="@drawable/annotation_draw_selected"
         android:visibility="gone" />
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/live_sharing_secondary_panel_1.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/live_sharing_secondary_panel_1.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/live_sharing_secondary_panel_1.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/live_sharing_secondary_panel_1.xml -->

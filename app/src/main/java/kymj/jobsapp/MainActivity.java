@@ -2,13 +2,21 @@ package kymj.jobsapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.multidex.MultiDexApplication;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.moxtra.sdk.MXAccountManager;
+import com.moxtra.sdk.MXException;
+import com.moxtra.sdk.MXSDKConfig;
+import com.moxtra.sdk.MXSDKException;
 import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
@@ -16,20 +24,55 @@ import com.parse.ParseUser;
 
 
 public class MainActivity extends Activity {
+
+    private MXAccountManager mAccountMgr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Enable Local Datastore.
         //Parse.enableLocalDatastore(this);
+
         Parse.initialize(this, "qCOUDggMQqCb743STldjmYzLwFqaWNwYg62okRK8", "fgm7HsfsqGpsXxYzbAua7u77oRoslTJGoTIdJ6Qg");
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        if (currentUser != null) {
-            Intent in = new Intent(getApplicationContext(), LandingActivity.class);
-            startActivity(in);
-            finish();
+        final ParseUser currentUser = ParseUser.getCurrentUser();
+
+        mAccountMgr = ((MoxtraApplication) super.getApplication()).getAccountMgr();
+//        mAccountMgr.unlinkAccount(new MXAccountManager.MXAccountUnlinkListener() {
+//            @Override
+//            public void onUnlinkAccountDone(MXSDKConfig.MXUserInfo mxUserInfo) {
+//
+//            }
+//        });
+        if (mAccountMgr.isLinked()) {
+            Log.e("user logged in","asas");
+            if (currentUser != null) {
+                Intent in = new Intent(getApplicationContext(), LandingActivity.class);
+                startActivity(in);
+                finish();
+            }
         }
+        else{
+            if(currentUser != null) {
+                MXSDKConfig.MXUserInfo userInfo = new MXSDKConfig.MXUserInfo(currentUser.get("username").toString(), MXSDKConfig.MXUserIdentityType.IdentityUniqueId);
+                Bitmap bmpAvatar = BitmapFactory.decodeFile("../../res/mipmap-mpdpi/ic_launcher.png");
+                MXSDKConfig.MXProfileInfo profile = new MXSDKConfig.MXProfileInfo(currentUser.get("name").toString(), null, bmpAvatar);
+                mAccountMgr.setupUser(userInfo, profile, null, new MXAccountManager.MXAccountLinkListener() {
+                    @Override
+                    public void onLinkAccountDone(boolean bSuccess) {
+                        // Do something in the callback.
+                        Log.e("Hello", "fsdfsdf");
+                        if (currentUser != null) {
+                            Intent in = new Intent(getApplicationContext(), LandingActivity.class);
+                            startActivity(in);
+                            finish();
+                        }
+                    }
+                });
+            }
+        }
+
     }
+   // }
 
 
     @Override
@@ -69,7 +112,15 @@ public class MainActivity extends Activity {
         ParseUser.logInInBackground(username, password, new LogInCallback() {
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
-                    System.err.print("accepted");
+                    MXSDKConfig.MXUserInfo userInfo = new MXSDKConfig.MXUserInfo(user.get("username").toString(), MXSDKConfig.MXUserIdentityType.IdentityUniqueId);
+                    Bitmap bmpAvatar = BitmapFactory.decodeFile("../../res/mipmap-mpdpi/ic_launcher.png");
+                    MXSDKConfig.MXProfileInfo profile = new MXSDKConfig.MXProfileInfo(user.get("name").toString(), null, bmpAvatar);
+                    mAccountMgr.setupUser(userInfo, profile, null, new MXAccountManager.MXAccountLinkListener() {
+                                @Override
+                                public void onLinkAccountDone(boolean b) {
+
+                                }
+                    });
                     Intent in = new Intent(getApplicationContext(), LandingActivity.class);
                     startActivity(in);
                     finish();
