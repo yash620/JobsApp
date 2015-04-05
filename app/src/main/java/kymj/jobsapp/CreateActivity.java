@@ -12,7 +12,7 @@ public class CreateActivity extends ActionBarSignOutActivity implements ActionBa
     ViewPager viewPager;
     CreateActivityPagerAdapter mAdapter;
 
-    private String[] tabs = { "Create Job", "My Jobs"};
+    private String[] tabs = { "My Jobs", "Create Job"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

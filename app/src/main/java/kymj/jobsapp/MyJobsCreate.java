@@ -74,7 +74,7 @@ public class MyJobsCreate extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ParseObject job = ((JobLocationAdapter)parent.getAdapter()).getItem(position);
+                ParseObject job = ((JobUserAdapter)parent.getAdapter()).getItem(position);
                 String jobId = job.getObjectId();
                 Intent jobIntent = new Intent(getActivity(), UserAcceptedJobActivity.class);
                 jobIntent.putExtra(MyJobsCreateJobId, jobId);
