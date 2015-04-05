@@ -31,4 +31,4 @@
         android:button="@drawable/taskview_icon_hide_selector"
         android:gravity="center" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_label_listitem.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/task_label_listitem.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/task_label_listitem.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/task_label_listitem.xml -->

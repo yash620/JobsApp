@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/todo_comments_indicator_gray" android:state_enabled="false" />
     <item android:drawable="@drawable/todo_comments_indicator" />
 
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/task_comment_selector.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/task_comment_selector.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/task_comment_selector.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/task_comment_selector.xml -->

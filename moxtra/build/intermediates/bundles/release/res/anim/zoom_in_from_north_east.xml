@@ -10,4 +10,4 @@
         android:pivotX="100%p"
         android:pivotY="0%p"
         android:duration="@android:integer/config_longAnimTime" />
-</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/zoom_in_from_north_east.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/anim/zoom_in_from_north_east.xml -->
+</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/zoom_in_from_north_east.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/anim/zoom_in_from_north_east.xml -->

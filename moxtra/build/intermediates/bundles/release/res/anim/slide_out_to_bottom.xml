@@ -19,4 +19,4 @@
     android:duration="@android:integer/config_longAnimTime"
     android:fromYDelta="0"
     android:toYDelta="100%p" />
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/slide_out_to_bottom.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/anim/slide_out_to_bottom.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/slide_out_to_bottom.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/anim/slide_out_to_bottom.xml -->

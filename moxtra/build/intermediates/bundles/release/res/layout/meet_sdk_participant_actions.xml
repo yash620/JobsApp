@@ -231,4 +231,4 @@
                 android:textColor="@color/darker_blue"/>
         </LinearLayout>
     </LinearLayout>
-</com.moxtra.binder.livemeet.MXParticipantActionsView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_sdk_participant_actions.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/meet_sdk_participant_actions.xml -->
+</com.moxtra.binder.livemeet.MXParticipantActionsView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_sdk_participant_actions.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/meet_sdk_participant_actions.xml -->

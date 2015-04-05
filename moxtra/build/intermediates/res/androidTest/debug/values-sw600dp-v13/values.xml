@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/values-sw600dp-v13/values.xml -->
+    <!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/values-sw600dp-v13/values.xml -->
     <eat-comment/>
     <bool name="is_tablet">true</bool>
     <item name="popover_title_color" type="color">@color/popover_title_color_tablet</item>

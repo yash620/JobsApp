@@ -60,4 +60,4 @@
         android:id="@+id/btn_exit"
         android:textColor="#ffff0000" />
 
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_control_toolbar_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/meet_control_toolbar_tablet.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/meet_control_toolbar_tablet.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/meet_control_toolbar_tablet.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/meet_control_toolbar_tablet.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/meet_control_toolbar_tablet.xml -->

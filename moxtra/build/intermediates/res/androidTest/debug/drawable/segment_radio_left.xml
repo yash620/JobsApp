@@ -8,4 +8,4 @@
 	<item android:state_checked="false"  android:drawable="@drawable/segment_radio_white_left" /> 
 	<item android:drawable="@drawable/segment_radio_grey_left" /> 	<!-- default  -->
 	
-</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/segment_radio_left.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/segment_radio_left.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/segment_radio_left.xml -->
+</selector><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/segment_radio_left.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/segment_radio_left.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/drawable/segment_radio_left.xml -->

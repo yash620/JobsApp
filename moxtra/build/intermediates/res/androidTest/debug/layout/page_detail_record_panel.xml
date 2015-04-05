@@ -73,4 +73,4 @@
             android:textColor="@color/holo_red_light" />
     </FrameLayout>
 
-</merge><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_record_panel.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/page_detail_record_panel.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/page_detail_record_panel.xml -->
+</merge><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_record_panel.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/page_detail_record_panel.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/page_detail_record_panel.xml -->

@@ -6,4 +6,4 @@
     <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/file_action_gray" />
     <item android:state_enabled="false" android:state_pressed="true" android:drawable="@drawable/file_action_gray" />
 </selector>
-<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/button_more.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/button_more.xml -->
+<!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/button_more.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/button_more.xml -->

@@ -62,4 +62,4 @@
     <!--Secondary Panel 2-->
     <include layout="@layout/page_detail_secondary_panel_2" />
 
-</com.moxtra.binder.widget.PageDetailActionPanel><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_action_panel.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/page_detail_action_panel.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/page_detail_action_panel.xml -->
+</com.moxtra.binder.widget.PageDetailActionPanel><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_action_panel.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/page_detail_action_panel.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/page_detail_action_panel.xml -->

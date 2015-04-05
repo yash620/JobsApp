@@ -186,4 +186,4 @@
             android:layout_height="@dimen/chat_avatar_size" />
     </LinearLayout>-->
 
-</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_chat_audio_to.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/row_chat_audio_to.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/row_chat_audio_to.xml -->
+</RelativeLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/row_chat_audio_to.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/row_chat_audio_to.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/row_chat_audio_to.xml -->

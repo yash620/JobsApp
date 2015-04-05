@@ -18,4 +18,4 @@
         android:src="@drawable/page_annotation"
         android:visibility="gone"/>
 
-</com.moxtra.binder.note.MXClipFloatBaseView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/clip_sdk_float_base.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/clip_sdk_float_base.xml -->
+</com.moxtra.binder.note.MXClipFloatBaseView><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/clip_sdk_float_base.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/clip_sdk_float_base.xml -->

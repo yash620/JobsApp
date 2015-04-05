@@ -3,4 +3,4 @@
     android:id="@+id/layout_sub_pages"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_sub_pages.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_sub_pages.xml -->
+    android:orientation="vertical" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_sub_pages.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/layout_sub_pages.xml -->

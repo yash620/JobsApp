@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/values-fi/values.xml -->
+    <!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/values-fi/values.xml -->
     <eat-comment/>
     <plurals name="activities">
         <item quantity="other">"%d toimintaa"</item>

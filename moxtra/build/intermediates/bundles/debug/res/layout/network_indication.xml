@@ -8,4 +8,4 @@
     android:layout_alignParentTop="true"
     android:layout_gravity="top|right"
     android:src="@drawable/network_indicator"
-    android:visibility="gone" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/network_indication.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/network_indication.xml -->
+    android:visibility="gone" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/network_indication.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/network_indication.xml -->

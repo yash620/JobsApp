@@ -11,4 +11,4 @@
 		android:fromAlpha="1.0" android:toAlpha="0.0"
 		android:duration="@android:integer/config_shortAnimTime"
 	/>
-</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/shrink_from_topleft_to_bottomright.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/anim/shrink_from_topleft_to_bottomright.xml -->
+</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/shrink_from_topleft_to_bottomright.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/anim/shrink_from_topleft_to_bottomright.xml -->

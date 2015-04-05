@@ -53,4 +53,4 @@
             layout="@layout/page_detail_record_panel" />
     </ViewSwitcher>
 
-</com.moxtra.binder.pageview.PageViewToolbar><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/clip_sdk_page_view_header.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/clip_sdk_page_view_header.xml -->
+</com.moxtra.binder.pageview.PageViewToolbar><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/clip_sdk_page_view_header.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/clip_sdk_page_view_header.xml -->

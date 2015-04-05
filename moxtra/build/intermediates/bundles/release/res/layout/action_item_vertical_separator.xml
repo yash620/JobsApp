@@ -2,4 +2,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/darker_gray" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/action_item_vertical_separator.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/action_item_vertical_separator.xml -->
+    android:background="@android:color/darker_gray" /><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/action_item_vertical_separator.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/action_item_vertical_separator.xml -->

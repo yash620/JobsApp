@@ -108,12 +108,20 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> d083adbbf93d7d3a57719f0154c7e7ffd7a8ea9d
         <activity
             android:name=".UserUnacceptedJobActivity"
             android:label="@string/title_activity_user_unaccepted_job" >
         </activity>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> d083adbbf93d7d3a57719f0154c7e7ffd7a8ea9d
         <activity
             android:name="com.moxtra.binder.activity.DialogFragmentActivity"
             android:theme="@style/MoxtraTheme"
@@ -174,6 +182,9 @@
 
     <meta-data android:name="com.moxtra.sdk.ClientId" android:value="p_2GP3XJuW0" />
         <meta-data android:name="com.moxtra.sdk.ClientSecret" android:value="vm8Nc-dbxC4" />
+<<<<<<< HEAD
     </application>
+=======
+>>>>>>> d083adbbf93d7d3a57719f0154c7e7ffd7a8ea9d
 
 </manifest>

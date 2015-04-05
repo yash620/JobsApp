@@ -48,4 +48,4 @@
         android:layout_marginRight="10dp"
         android:src="@drawable/topiclist_favorite"
         android:visibility="visible"/>
-</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/timeline_indicator.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/timeline_indicator.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/timeline_indicator.xml -->
+</LinearLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/timeline_indicator.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/timeline_indicator.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/timeline_indicator.xml -->
