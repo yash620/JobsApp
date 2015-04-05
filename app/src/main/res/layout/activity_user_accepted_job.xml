@@ -88,6 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
             android:text="Worker Information"
             android:id="@+id/worker_info_text"
 
@@ -96,6 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="center_horizontal"
             android:text="Insert Name Here"
             android:id="@+id/name_text"/>
 
@@ -103,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="center_horizontal"
             android:text="Insert user name here"
             android:id="@+id/user_name_text"/>
 
@@ -130,5 +133,14 @@
             android:id="@+id/AcceptedJobChatButton"/>
 
     </LinearLayout>
+
+    <Button
+        style="@style/ButtonStyle"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed"
+        android:id="@+id/Accepted_user_complete"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

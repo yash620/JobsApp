@@ -45,6 +45,12 @@ public class JobUserAdapter extends ParseQueryAdapter<ParseObject> {
         // Add the title view
         TextView titleTextView = (TextView) v.findViewById(R.id.title);
         titleTextView.setText(object.getString("title"));
+        if(object.getParseUser("acceptor") != null){
+            titleTextView.setTextColor(Color.GREEN);
+        }
+        else{
+            titleTextView.setTextColor(Color.parseColor("#33c0e0"));
+        }
         //titleTextView.setTextColor(Color.GREEN);
 
         TextView descView = (TextView) v.findViewById(R.id.description);
