@@ -19,4 +19,4 @@
         android:headerDividersEnabled="false"
         android:listSelector="#00000000" />
 
-</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_listview.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/layout_listview.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_listview.xml -->
+</FrameLayout><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/layout_listview.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/layout_listview.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/build/intermediates/bundles/debug/res/layout/layout_listview.xml -->

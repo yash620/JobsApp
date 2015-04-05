@@ -17,4 +17,4 @@
         android:toAlpha="0"
         android:duration="@android:integer/config_longAnimTime" />
         -->
-</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/zoom_out_to_east.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/anim/zoom_out_to_east.xml -->
+</set><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/anim/zoom_out_to_east.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/anim/zoom_out_to_east.xml -->

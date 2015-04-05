@@ -57,4 +57,4 @@
     <!--Secondary Panel 2-->
     <include layout="@layout/page_detail_secondary_panel_2" />
 
-</com.moxtra.binder.widget.SDKPageDetailActionPanel><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_action_panel_for_sdk.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/layout/page_detail_action_panel_for_sdk.xml -->
+</com.moxtra.binder.widget.SDKPageDetailActionPanel><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/layout/page_detail_action_panel_for_sdk.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/layout/page_detail_action_panel_for_sdk.xml -->

@@ -21,8 +21,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.moxtra.sdk.MXAccountManager;
-import com.moxtra.sdk.MXChatManager;
-import com.moxtra.sdk.MXException;
 import com.moxtra.sdk.MXSDKException;
 import com.parse.GetCallback;
 import com.parse.ParseException;
@@ -82,9 +80,9 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
             }
         });
 
-        MXChatManager conversationMgr = MXChatManager.getInstance();
+        //MXChatManager conversationMgr = MXChatManager.getInstance();
         Log.d("Hello","Hello");
-        try {
+        /*try {
             MXChatManager.getInstance().createChat(new MXChatManager.OnCreateChatListener() {
                 @Override
                 public void onCreateChatSuccess(String binderID) {
@@ -98,7 +96,7 @@ public class AcceptedJobActivity extends ActionBarSignOutActivity implements OnM
             });
         } catch (MXException.AccountManagerIsNotValid e) {
             e.printStackTrace();
-        }
+        }*/
 
 
 

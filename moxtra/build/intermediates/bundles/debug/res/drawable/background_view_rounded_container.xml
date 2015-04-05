@@ -6,4 +6,4 @@
 	    <solid android:color="@color/rounded_container_border" />
 	    <corners android:radius="11.0dip" />    
 	</shape>
-</inset><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/background_view_rounded_container.xml --><!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/drawable/background_view_rounded_container.xml -->
+</inset><!-- From: file:/D:/workspace/SDK/ChatSDK/resources/res/drawable/background_view_rounded_container.xml --><!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/drawable/background_view_rounded_container.xml -->

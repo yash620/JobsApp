@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/marcof/Desktop/JobsApp/moxtra/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Yashwanth/AndroidStudioProjects/JobsApp/moxtra/res/values/values.xml -->
     <eat-comment/>
     <string-array name="hours">
         <item>0 hr</item>
