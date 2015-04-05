@@ -19,10 +19,11 @@ public class CreateActivityPagerAdapter extends FragmentPagerAdapter{
         switch (index) {
             case 0:
                 //create job fragment here
-                return new CreateJob();
+                return new MyJobsCreate();
             case 1:
                 //myJobs fragment here
-                return new MyJobsCreate();
+                return new CreateJob();
+
         }
 
         return null;

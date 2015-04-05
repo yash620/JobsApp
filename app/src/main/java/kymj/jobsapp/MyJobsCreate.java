@@ -1,13 +1,17 @@
 package kymj.jobsapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.parse.ParseObject;
 
 
 public class MyJobsCreate extends Fragment {
@@ -15,7 +19,7 @@ public class MyJobsCreate extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    public static final String MyJobsCreateJobId = "kymj.jobsapp.myjobscreatejobid";
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -62,11 +66,22 @@ public class MyJobsCreate extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.my_jobs_create_list_view);
         listView.setAdapter(jobAdapter);
 
-
-        //adding in click recognition for list view items
-
         jobAdapter.loadObjects();
         System.err.print("load");
+
+        Activity me = getActivity();
+        //adding in click recognition for list view items
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ParseObject job = ((JobUserAdapter)parent.getAdapter()).getItem(position);
+                String jobId = job.getObjectId();
+                Intent jobIntent = new Intent(getActivity(), UserAcceptedJobActivity.class);
+                jobIntent.putExtra(MyJobsCreateJobId, jobId);
+                startActivity(jobIntent);
+
+            }
+        });
 
         return rootView;
 
